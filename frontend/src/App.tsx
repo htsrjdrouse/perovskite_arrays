@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
-import { io, Socket } from 'socket.io-client';
+import { io } from 'socket.io-client';
 import { CameraStream } from './components/CameraStream';
 import { SampleGrid } from './components/SampleGrid';
 import { FocusControl } from './components/FocusControl';
+import { RecipeViewer } from './components/RecipeViewer';
 
 const API_BASE = '/api';
 
@@ -36,7 +37,6 @@ interface ArrayConfig {
 }
 
 function App() {
-  const [socket, setSocket] = useState<Socket | null>(null);
   const [samples, setSamples] = useState<Sample[]>([]);
   const [focusValue, setFocusValue] = useState(0.5);
   const [isStreamActive, setIsStreamActive] = useState(false);
@@ -51,8 +51,7 @@ function App() {
   // Initialize socket connection
   useEffect(() => {
     const newSocket = io();
-    setSocket(newSocket);
-
+    
     newSocket.on('sample:created', (sample: Sample) => {
       setSamples(prev => [sample, ...prev]);
     });
@@ -287,6 +286,8 @@ function App() {
               onCapture={captureImage}
             />
           </div>
+          
+          <RecipeViewer />
         </div>
       </div>
     </div>

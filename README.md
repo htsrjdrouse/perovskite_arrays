@@ -9,6 +9,7 @@ A web-based laboratory control system for high-throughput liquid dispensing of p
 - **Array Configuration** - Configure grid dimensions and sample compositions
 - **Sample Management** - Track sample status (pending, dispensing, completed, failed)
 - **Image Capture** - Capture and store images for each sample
+- **Recipe Library** - Built-in mimic ink recipes with xanthan gum
 - **Real-time Updates** - Socket.IO for live status updates
 
 ## Tech Stack
@@ -78,13 +79,16 @@ perovskite_arrays/
 │   └── Dockerfile
 ├── frontend/
 │   ├── src/
-│   │   ├── App.tsx        # Main application
+│   │   ├── App.tsx              # Main application
 │   │   ├── main.tsx
 │   │   ├── index.css
+│   │   ├── data/
+│   │   │   └── recipes.ts       # Mimic ink recipes (xanthan gum version)
 │   │   └── components/
-│   │       ├── CameraStream.tsx
-│   │       ├── SampleGrid.tsx
-│   │       └── FocusControl.tsx
+│   │       ├── CameraStream.tsx     # Live video feed
+│   │       ├── SampleGrid.tsx       # Array grid with status tracking
+│   │       ├── FocusControl.tsx     # Focus slider/auto
+│   │       └── RecipeViewer.tsx     # Recipe lookup table
 │   ├── package.json
 │   ├── vite.config.ts
 │   ├── tsconfig.json
