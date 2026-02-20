@@ -1,297 +1,184 @@
-import { useState, useEffect, useCallback } from 'react';
-import { io } from 'socket.io-client';
-import { CameraStream } from './components/CameraStream';
-import { SampleGrid } from './components/SampleGrid';
-import { FocusControl } from './components/FocusControl';
-import { RecipeViewer } from './components/RecipeViewer';
+import React, { useState } from 'react';
 
-const API_BASE = '/api';
+const RECIPE_DATA = [
+  {
+    layer: 'PEDOT:PSS mimic',
+    viscosity: '3–6 cP',
+    xanthan: '0.002–0.003 g',
+    stockVolume: '0.2–0.3 mL',
+    baseRecipe: '9.5 mL water + 3–4 drops blue + 0.3 mL glycerin + 1 drop soap',
+    notes: 'Very thin — use less stock if too thick.'
+  },
+  {
+    layer: 'FASnI₃ mimic',
+    viscosity: '15–20 cP',
+    xanthan: '0.004–0.005 g',
+    stockVolume: '0.4–0.5 mL',
+    baseRecipe: '8.8 mL water + 1–2 drops yellow + 1 drop red + 1 mL glycerin',
+    notes: 'Medium thickness — start with 0.4 mL stock.'
+  },
+  {
+    layer: 'ICBA mimic',
+    viscosity: '12–18 cP',
+    xanthan: '0.003–0.004 g',
+    stockVolume: '0.3–0.4 mL',
+    baseRecipe: '9.3 mL water + 0.6 mL glycerin + 0.2 mL hand sanitizer gel + 1 drop soap',
+    notes: 'Clear & smooth — adjust stock for flow.'
+  },
+  {
+    layer: 'Dequasol mimic',
+    viscosity: '5–10 cP',
+    xanthan: '0.002–0.003 g',
+    stockVolume: '0.2–0.3 mL',
+    baseRecipe: '9.5 mL water + 0.5 mL glycerin + 1 drop soap',
+    notes: 'Thin & hard-setting — low xanthan.'
+  },
+  {
+    layer: 'Resin seal mimic',
+    viscosity: '90–150 cP',
+    xanthan: '0.01–0.015 g',
+    stockVolume: '1.0–1.5 mL',
+    baseRecipe: '7 mL PVA glue + 3 mL water + 0.5 mL glycerin',
+    notes: 'Thick — use more stock + PVA base.'
+  }
+];
 
-interface Sample {
-  id: string;
-  name: string;
-  composition: {
-    precursorA: string;
-    precursorB: string;
-    solvent: string;
-    concentration: number;
-  };
-  position: { row: number; column: number };
-  dispenseVolume: number;
-  status: 'pending' | 'dispensing' | 'completed' | 'failed';
-  image?: string;
-  timestamp: string;
-}
-
-interface ArrayConfig {
-  rows: number;
-  cols: number;
-  baseName: string;
-  baseComposition: {
-    precursorA: string;
-    precursorB: string;
-    solvent: string;
-    concentration: number;
-  };
-  baseVolume: number;
-}
-
-function App() {
-  const [samples, setSamples] = useState<Sample[]>([]);
-  const [focusValue, setFocusValue] = useState(0.5);
-  const [isStreamActive, setIsStreamActive] = useState(false);
-  const [arrayConfig, setArrayConfig] = useState<ArrayConfig>({
-    rows: 8,
-    cols: 12,
-    baseName: 'Perovskite',
-    baseComposition: { precursorA: 'PbI2', precursorB: 'MAI', solvent: 'DMF', concentration: 0.5 },
-    baseVolume: 50
-  });
-
-  // Initialize socket connection
-  useEffect(() => {
-    const newSocket = io();
-    
-    newSocket.on('sample:created', (sample: Sample) => {
-      setSamples(prev => [sample, ...prev]);
-    });
-
-    newSocket.on('sample:updated', (sample: Sample) => {
-      setSamples(prev => prev.map(s => s.id === sample.id ? sample : s));
-    });
-
-    newSocket.on('array:created', (data: { samples: Sample[] }) => {
-      setSamples(prev => [...data.samples, ...prev]);
-    });
-
-    newSocket.on('image:captured', (data: { id: string; filename: string; sampleId?: string }) => {
-      console.log('Image captured:', data.filename);
-    });
-
-    return () => { newSocket.close(); };
-  }, []);
-
-  // Fetch samples on mount
-  useEffect(() => {
-    fetchSamples();
-  }, []);
-
-  const fetchSamples = async () => {
-    try {
-      const response = await fetch(`${API_BASE}/samples`);
-      if (response.ok) {
-        const data = await response.json();
-        setSamples(data);
-      }
-    } catch (error) {
-      console.error('Failed to fetch samples:', error);
-    }
-  };
-
-  const createArray = async () => {
-    try {
-      const response = await fetch(`${API_BASE}/arrays/create`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(arrayConfig)
-      });
-      if (response.ok) {
-        const data = await response.json();
-        console.log(`Created ${data.count} samples`);
-      }
-    } catch (error) {
-      console.error('Failed to create array:', error);
-    }
-  };
-
-  const updateSampleStatus = async (sampleId: string, status: Sample['status']) => {
-    try {
-      await fetch(`${API_BASE}/samples/${sampleId}/status`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ status })
-      });
-    } catch (error) {
-      console.error('Failed to update status:', error);
-    }
-  };
-
-  const captureImage = async (sampleId?: string) => {
-    try {
-      await fetch(`${API_BASE}/camera/capture`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sampleId })
-      });
-    } catch (error) {
-      console.error('Failed to capture image:', error);
-    }
-  };
-
-  const handleFocusChange = useCallback(async (value: number) => {
-    setFocusValue(value);
-    try {
-      await fetch(`${API_BASE}/camera/focus`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ position: value })
-      });
-    } catch (error) {
-      console.error('Failed to set focus:', error);
-    }
-  }, []);
-
-  const handleAutoFocus = useCallback(async () => {
-    try {
-      await fetch(`${API_BASE}/camera/focus/auto`, { method: 'POST' });
-      setFocusValue(0.5);
-    } catch (error) {
-      console.error('Failed to auto focus:', error);
-    }
-  }, []);
+export default function App() {
+  const [selectedLayer, setSelectedLayer] = useState<number | null>(null);
 
   return (
     <div className="container">
       <header>
-        <h1>🔬 Perovskite Array Dispensing</h1>
-        <p>High-throughput liquid dispensing for perovskite research</p>
+        <h1>🧪 Perovskite Mimic Ink Recipes</h1>
+        <p>Using 0.1% xanthan gum stock solution</p>
       </header>
 
-      <div className="main-content">
-        <div className="left-panel">
-          <div className="camera-section">
-            <h2>Microscope View</h2>
-            {isStreamActive && <CameraStream />}
-            
-            <div className="stream-controls">
-              <button 
-                className="stream-btn start"
-                onClick={() => setIsStreamActive(true)}
-                disabled={isStreamActive}
-              >
-                ▶ Start Stream
-              </button>
-              <button 
-                className="stream-btn stop"
-                onClick={() => setIsStreamActive(false)}
-                disabled={!isStreamActive}
-              >
-                ⏹ Stop Stream
-              </button>
-            </div>
-
-            <FocusControl
-              focusValue={focusValue}
-              onFocusChange={handleFocusChange}
-              onAutoFocus={handleAutoFocus}
-              isFocused={focusValue > 0.3 && focusValue < 0.7}
-            />
-          </div>
-
-          <div className="array-config">
-            <h2>Array Configuration</h2>
-            <div className="config-grid">
-              <label>
-                Rows
-                <input 
-                  type="number" 
-                  value={arrayConfig.rows}
-                  onChange={e => setArrayConfig(prev => ({ ...prev, rows: parseInt(e.target.value) }))}
-                  min="1" max="24"
-                />
-              </label>
-              <label>
-                Columns
-                <input 
-                  type="number" 
-                  value={arrayConfig.cols}
-                  onChange={e => setArrayConfig(prev => ({ ...prev, cols: parseInt(e.target.value) }))}
-                  min="1" max="24"
-                />
-              </label>
-              <label>
-                Base Name
-                <input 
-                  type="text" 
-                  value={arrayConfig.baseName}
-                  onChange={e => setArrayConfig(prev => ({ ...prev, baseName: e.target.value }))}
-                />
-              </label>
-              <label>
-                Precursor A
-                <input 
-                  type="text" 
-                  value={arrayConfig.baseComposition.precursorA}
-                  onChange={e => setArrayConfig(prev => ({ 
-                    ...prev, 
-                    baseComposition: { ...prev.baseComposition, precursorA: e.target.value }
-                  }))}
-                />
-              </label>
-              <label>
-                Precursor B
-                <input 
-                  type="text" 
-                  value={arrayConfig.baseComposition.precursorB}
-                  onChange={e => setArrayConfig(prev => ({ 
-                    ...prev, 
-                    baseComposition: { ...prev.baseComposition, precursorB: e.target.value }
-                  }))}
-                />
-              </label>
-              <label>
-                Solvent
-                <input 
-                  type="text" 
-                  value={arrayConfig.baseComposition.solvent}
-                  onChange={e => setArrayConfig(prev => ({ 
-                    ...prev, 
-                    baseComposition: { ...prev.baseComposition, solvent: e.target.value }
-                  }))}
-                />
-              </label>
-              <label>
-                Concentration (M)
-                <input 
-                  type="number" 
-                  step="0.1"
-                  value={arrayConfig.baseComposition.concentration}
-                  onChange={e => setArrayConfig(prev => ({ 
-                    ...prev, 
-                    baseComposition: { ...prev.baseComposition, concentration: parseFloat(e.target.value) }
-                  }))}
-                />
-              </label>
-              <label>
-                Volume (nL)
-                <input 
-                  type="number" 
-                  value={arrayConfig.baseVolume}
-                  onChange={e => setArrayConfig(prev => ({ ...prev, baseVolume: parseFloat(e.target.value) }))}
-                />
-              </label>
-            </div>
-            <button className="create-array-btn" onClick={createArray}>
-              Create Array Grid
-            </button>
-          </div>
-        </div>
-
-        <div className="right-panel">
-          <div className="samples-section">
-            <h2>Sample Array ({samples.length} spots)</h2>
-            <SampleGrid 
-              samples={samples}
-              onStatusChange={updateSampleStatus}
-              onCapture={captureImage}
-            />
+      <div className="recipe-section">
+        <p className="intro">
+          Make a 0.1% xanthan gum stock: Add 0.1 g xanthan to 100 mL water, shake vigorously, let hydrate 2+ hours. Use this stock to adjust viscosity.
+        </p>
+        
+        <div className="recipe-table">
+          <div className="table-header">
+            <span>Layer / Ink</span>
+            <span>Target Viscosity</span>
+            <span>Xanthan (g/10mL)</span>
+            <span>Stock Volume</span>
+            <span>Base Recipe</span>
+            <span>Notes</span>
           </div>
           
-          <RecipeViewer />
+          {RECIPE_DATA.map((recipe, idx) => (
+            <React.Fragment key={idx}>
+              <div 
+                className={`table-row ${selectedLayer === idx ? 'selected' : ''}`}
+                onClick={() => setSelectedLayer(selectedLayer === idx ? null : idx)}
+              >
+                <span className="layer-name">{recipe.layer}</span>
+                <span>{recipe.viscosity}</span>
+                <span className="xanthan">{recipe.xanthan}</span>
+                <span>{recipe.stockVolume}</span>
+                <span className="base-recipe">{recipe.baseRecipe}</span>
+                <span className="notes">{recipe.notes}</span>
+              </div>
+              
+              {selectedLayer === idx && (
+                <div className="detail-panel">
+                  <h3>{recipe.layer}</h3>
+                  <div className="detail-grid">
+                    <div className="detail-item">
+                      <strong>Target Viscosity:</strong>
+                      <p>{recipe.viscosity}</p>
+                    </div>
+                    <div className="detail-item">
+                      <strong>Xanthan per 10 mL:</strong>
+                      <p>{recipe.xanthan}</p>
+                    </div>
+                    <div className="detail-item">
+                      <strong>0.1% Stock to Add:</strong>
+                      <p>{recipe.stockVolume}</p>
+                    </div>
+                    <div className="detail-item full">
+                      <strong>Base Recipe (10 mL total):</strong>
+                      <p>{recipe.baseRecipe}</p>
+                    </div>
+                    <div className="detail-item full">
+                      <strong>Notes:</strong>
+                      <p>{recipe.notes}</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
+
+      <style>{`
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background: #f8fafc;
+          color: #1e293b;
+          min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 30px 20px; }
+        header { text-align: center; margin-bottom: 24px; }
+        header h1 {
+          font-size: 2rem;
+          color: #0f172a;
+          margin-bottom: 6px;
+        }
+        header p { color: #64748b; }
+        .recipe-section { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .intro {
+          padding: 16px 20px;
+          background: #fef3c7;
+          color: #92400e;
+          font-size: 0.9rem;
+          border-bottom: 1px solid #fde68a;
+        }
+        .table-header, .table-row {
+          display: grid;
+          grid-template-columns: 140px 90px 100px 100px 1fr 1.2fr;
+          gap: 10px;
+          padding: 12px 16px;
+          align-items: start;
+        }
+        .table-header {
+          background: #f1f5f9;
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          color: #64748b;
+          font-weight: 600;
+        }
+        .table-row {
+          border-bottom: 1px solid #e2e8f0;
+          cursor: pointer;
+          transition: background 0.2s;
+        }
+        .table-row:hover { background: #f8fafc; }
+        .table-row.selected { background: #eff6ff; }
+        .layer-name { font-weight: 500; font-size: 0.85rem; color: #1e40af; }
+        .xanthan { font-weight: 500; color: #16a34a; }
+        .base-recipe { font-size: 0.8rem; color: #64748b; }
+        .notes { font-size: 0.75rem; color: #94a3b8; font-style: italic; }
+        .detail-panel {
+          background: #eff6ff;
+          padding: 20px;
+          border-bottom: 1px solid #dbeafe;
+        }
+        .detail-panel h3 { color: #1e40af; margin-bottom: 16px; font-size: 1rem; }
+        .detail-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .detail-item strong { display: block; font-size: 0.75rem; color: #64748b; margin-bottom: 4px; text-transform: uppercase; }
+        .detail-item p { font-size: 0.9rem; line-height: 1.5; }
+        .detail-item.full { grid-column: 1 / -1; }
+      `}</style>
     </div>
   );
 }
-
-export default App;
