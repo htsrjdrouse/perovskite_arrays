@@ -1,15 +1,15 @@
-# Perovskite Arrays Toolchanging Project Notebook
+# Perovskite Nanosolar Toolchanger Notebook
 
 ## Overview
-Electronic notebook for the perovskite arrays toolchanging project. Tracks development, experiments, issues, and progress.
+Electronic notebook for the perovskite nanosolar toolchanging 3D printer project. The system features 3 tools: liquid handling, UV curing, and camera inspection for automated perovskite array dispensing.
 
 Started: 2026-02-20
 Location: /home/rista/perovskite_arrays
 
 ## Project Goals
-- Develop automated toolchanging system for perovskite material deposition
-- Integrate with array fabrication processes
-- Ensure precision and reliability
+- Develop toolchanging 3D printer for perovskite nanosolar arrays
+- Integrate liquid dispensing, UV curing, and camera inspection
+- Achieve high-precision automated fabrication
 
 ## Components
 - Backend: Node.js/TypeScript server (src/index.ts)
@@ -36,5 +36,6 @@ Location: /home/rista/perovskite_arrays
 - Update regularly for traceability
 
 ## Links
-- GitHub: TBD
-- Docs: TBD
+- Hardware: https://github.com/htsrjdrouse/rister-toolchanger/tree/4dispenser
+- Camera: https://github.com/htsrjdrouse/rister-toolchanger/tree/4dispenser/camera-pi
+- Control Software: This repo
