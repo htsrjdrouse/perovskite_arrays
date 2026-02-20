@@ -21,10 +21,11 @@ Location: /home/rista/perovskite_arrays
 - 2026-02-20: Initial setup, Docker build issues resolved (TypeScript fix in backend)
 
 ## Experiments
-### Exp 1: Basic Array Creation
-- Date: TBD
-- Parameters: 
-- Results: 
+### Exp 1: Mimic Inks Dispensing Validation
+- Date: 2026-02-20
+- Parameters: All mimic inks tested
+- Results: Dispensing validated for all inks
+- Notes: Ready for perovskite material integration
 
 ## Issues & Fixes
 - TypeScript error in backend: Fixed `col` to `column` in position object
