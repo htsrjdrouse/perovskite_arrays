@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RecipeViewer: React.FC = () => {
+const Intro: React.FC = () => {
   return (
     <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
       <h1>Project Introduction: Toolchanger 3D Printer for Transparent Perovskite Nanosolar Arrays</h1>
@@ -118,4 +118,4 @@ const RecipeViewer: React.FC = () => {
   );
 };
 
-export default RecipeViewer;
+export default Intro;
