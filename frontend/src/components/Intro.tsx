@@ -2,8 +2,8 @@ import React from 'react';
 
 const Intro: React.FC = () => {
   return (
-    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-      <h1>Project Introduction: Toolchanger 3D Printer for Transparent Perovskite Nanosolar Arrays</h1>
+    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', color: '#000' }}>
+      <h1 style={{ color: '#00d4ff' }}>Project Introduction: Toolchanger 3D Printer for Transparent Perovskite Nanosolar Arrays</h1>
 
       <h2>Project Overview and Objective</h2>
       <p>The core objective of this project is to develop an open-source toolchanger 3D printer capable of fabricating transparent, window-attached nanosolar arrays using perovskite materials as the photovoltaic absorber. These arrays are designed as thin, flexible films that can be applied directly to windows, glass facades, or other transparent surfaces, transforming ordinary glass into energy-generating, energy-storing surfaces.</p>
@@ -27,16 +27,16 @@ const Intro: React.FC = () => {
       <p>The device is built through a sequential 7-step deposition process on a flexible ITO-PET substrate. Each step uses the toolchanger system for precise dispensing (via interchangeable Luer lock needles/pipettes), UV curing (where applicable), and camera inspection.</p>
       <p>Dispenser recommendations use standard gauge ranges (10G–34G available) based on mimic ink viscosity tests and line volume requirements.</p>
 
-      <table style={{ width: '100%', borderCollapse: 'collapse', margin: '20px 0' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', margin: '20px 0', color: '#000' }}>
         <thead>
           <tr style={{ background: '#f0f0f0' }}>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Step</th>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Process</th>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Real Ink / Material</th>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Mimic Ink Recipe (10 mL batch) – Corrected Xanthan Gum Version</th>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Approx. Viscosity</th>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Dispenser</th>
-            <th style={{ border: '1px solid #ddd', padding: '8px' }}>Notes / Dry Time</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Step</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Process</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Real Ink / Material</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Mimic Ink Recipe (10 mL batch) – Corrected Xanthan Gum Version</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Approx. Viscosity</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Dispenser</th>
+            <th style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>Notes / Dry Time</th>
           </tr>
         </thead>
         <tbody>
