@@ -3,6 +3,8 @@ import cors from 'cors';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import { v4 as uuidv4 } from 'uuid';
+import path from 'path';
+import fs from 'fs';
 
 const app = express();
 const httpServer = createServer(app);
@@ -124,6 +126,34 @@ app.post('/api/arrays/create', (req: Request, res: Response) => {
 // Health check
 app.get('/api/health', (req: Request, res: Response) => {
   res.json({ status: 'ok', storage: 'memory' });
+});
+
+// Documentation endpoints
+const docsPath = path.join(__dirname, '../../');
+const docFiles = [
+  'executive_summary.md',
+  'NOTEBOOK.md',
+  'project_overview.md',
+  'fabrication_workflow.md',
+  'current_progress.md'
+];
+
+app.get('/api/docs', (req: Request, res: Response) => {
+  res.json(docFiles.map(file => ({ name: file, url: `/api/docs/${file}` })));
+});
+
+app.get('/api/docs/:filename', (req: Request, res: Response) => {
+  const filename = req.params.filename;
+  if (!docFiles.includes(filename)) {
+    return res.status(404).json({ error: 'Documentation file not found' });
+  }
+  const filePath = path.join(docsPath, filename);
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read documentation file' });
+    }
+    res.type('text/markdown').send(data);
+  });
 });
 
 // Socket.IO connection

@@ -2,10 +2,13 @@
 
 **Company:** HTS Resources, LLC  
 **Location:** San Diego, California  
-**Date:** November 18, 2025
+
+<br>
 
 ## The Opportunity
 California’s commercial buildings consume over 40% of the state’s electricity, with peak demand driven by lighting, HVAC, and electronics. Current solar films are either opaque or lack onboard storage, forcing reliance on the grid during low-light hours. This creates unnecessary transmission losses and prevents true energy autonomy.
+
+<br>
 
 ## Our Solution
 We have developed **Nanosolar Tile** — the world’s first fully printable, flexible, transparent film that combines high-efficiency perovskite solar generation with integrated solid-state battery storage in a single ~145 µm-thick layer.
@@ -16,13 +19,16 @@ We have developed **Nanosolar Tile** — the world’s first fully printable, fl
 - **Form Factor:** Applied directly to existing windows or facades (BIPV retrofit or new construction)
 - **Self-Charging:** Harvests daylight and stores energy on-site — zero external wiring or converters required
 
-![Nanosolar Tile – Transparent Window-Attached PV Film](frontend/images/PV_transparent.png)  
+![Nanosolar Tile – Transparent Window-Attached PV Film](/PV_transparent.png)  
+
 *Generated illustration of a transparent window with attached perovskite nanosolar film, demonstrating high AVT while generating power.*
+
+<br>
 
 ## Technology
 All layers are printed as interdigitated micro-line arrays using a low-cost (<$5k) Reprap-class 3D printer with the open-source Rister toolchanger. The process runs at ≤100°C, uses quick-swap nozzles (0.0025"–0.508 mm), and is fully replicable.
 
-**Key innovations (company-owned IP):**
+**Key innovations:**
 - Line-array architecture achieving simultaneous high transparency and usable storage capacity
 - Ambient-pressure, UV-crosslinked LLZO-PEO solid electrolyte printable at room temperature
 - Monolithic voltage-matched solar + battery integration

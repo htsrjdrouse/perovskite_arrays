@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Outlet } from 'react-router-dom';
 import Intro from './components/Intro';
 import RecipeViewer from './components/RecipeViewer';
+import DocPage from './components/DocPage';
 
 const Layout: React.FC = () => {
   return (
@@ -13,22 +14,19 @@ const Layout: React.FC = () => {
         padding: '20px',
         boxShadow: '2px 0 5px rgba(0,0,0,0.1)'
       }}>
-        <h2 style={{ marginBottom: '20px', color: '#00d4ff' }}>📖 Notebook TOC</h2>
+        <h2 style={{ marginBottom: '20px', color: '#00d4ff' }}>📖 NOTEBOOK</h2>
         <ul style={{ listStyle: 'none', padding: 0 }}>
           <li style={{ marginBottom: '10px' }}>
-            <Link to="/" style={{ color: '#00d4ff', textDecoration: 'none' }}>🏠 Introduction</Link>
+            <Link to="/" style={{ color: '#00d4ff', textDecoration: 'none' }}>📋 Executive Summary</Link>
           </li>
           <li style={{ marginBottom: '10px' }}>
-            <Link to="/recipes" style={{ color: '#00d4ff', textDecoration: 'none' }}>🧪 Mimic Ink Recipes</Link>
+            <Link to="/project-overview" style={{ color: '#00d4ff', textDecoration: 'none' }}>📊 Project Overview</Link>
           </li>
           <li style={{ marginBottom: '10px' }}>
-            <Link to="/experiments" style={{ color: '#00d4ff', textDecoration: 'none' }}>🔬 Experiments</Link>
+            <Link to="/fabrication-workflow" style={{ color: '#00d4ff', textDecoration: 'none' }}>⚗️ Fabrication Workflow</Link>
           </li>
           <li style={{ marginBottom: '10px' }}>
-            <Link to="/hardware" style={{ color: '#00d4ff', textDecoration: 'none' }}>⚙️ Hardware</Link>
-          </li>
-          <li style={{ marginBottom: '10px' }}>
-            <Link to="/software" style={{ color: '#00d4ff', textDecoration: 'none' }}>💻 Software</Link>
+            <Link to="/current-progress" style={{ color: '#00d4ff', textDecoration: 'none' }}>✅ Current Progress</Link>
           </li>
         </ul>
       </nav>
@@ -44,11 +42,11 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Intro />} />
+          <Route index element={<DocPage filename="executive_summary.md" />} />
+          <Route path="project-overview" element={<DocPage filename="project_overview.md" />} />
+          <Route path="fabrication-workflow" element={<DocPage filename="fabrication_workflow.md" />} />
+          <Route path="current-progress" element={<DocPage filename="current_progress.md" />} />
           <Route path="recipes" element={<RecipeViewer />} />
-          <Route path="experiments" element={<div><h1>Experiments</h1><p>Coming soon...</p></div>} />
-          <Route path="hardware" element={<div><h1>Hardware</h1><p>Coming soon...</p></div>} />
-          <Route path="software" element={<div><h1>Software</h1><p>Coming soon...</p></div>} />
         </Route>
       </Routes>
     </Router>

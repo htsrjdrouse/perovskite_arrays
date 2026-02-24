@@ -3,7 +3,17 @@ import React from 'react';
 const Intro: React.FC = () => {
   return (
     <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto', color: '#000' }}>
-      <h1 style={{ color: '#00d4ff' }}>Project Introduction: Toolchanger 3D Printer for Transparent Perovskite Nanosolar Arrays</h1>
+      <h1 style={{ color: '#00d4ff' }}>Perovskite Nanosolar Arrays Electronic Notebook</h1>
+
+      <h2>Notebook Table of Contents</h2>
+      <ul>
+        <li><a href="https://raw.githubusercontent.com/htsrjdrouse/perovskite_arrays/main/executive_summary.md" target="_blank" style={{ color: '#00d4ff' }}>Executive Summary: Nanosolar Tile</a> - High-level overview, opportunity, solution specs, market impact, traction, and contact info.</li>
+        <li><a href="https://raw.githubusercontent.com/htsrjdrouse/perovskite_arrays/main/project_intro_updated.md" target="_blank" style={{ color: '#00d4ff' }}>Project Introduction</a> - Core objectives, BIPV application, key advantages, future extensions, and mimic ink validation context.</li>
+        <li><a href="https://raw.githubusercontent.com/htsrjdrouse/perovskite_arrays/main/fabrication_workflow.md" target="_blank" style={{ color: '#00d4ff' }}>Fabrication Workflow</a> - Detailed 7-step deposition process, mimic ink recipes, viscosities, dispenser gauges, and notes.</li>
+        <li><a href="https://raw.githubusercontent.com/htsrjdrouse/perovskite_arrays/main/current_progress.md" target="_blank" style={{ color: '#00d4ff' }}>Current Progress & Next Steps</a> - Achievements to date, hardware/software summary, and planned lab collaboration.</li>
+      </ul>
+
+      <p>This notebook documents the development of a toolchanger 3D printer for fabricating transparent perovskite nanosolar arrays (Nanosolar Tile project).</p>
 
       <h2>Project Overview and Objective</h2>
       <p>The core objective of this project is to develop an open-source toolchanger 3D printer capable of fabricating transparent, window-attached nanosolar arrays using perovskite materials as the photovoltaic absorber. These arrays are designed as thin, flexible films that can be applied directly to windows, glass facades, or other transparent surfaces, transforming ordinary glass into energy-generating, energy-storing surfaces.</p>
