@@ -8,11 +8,35 @@
   - Built a functional toolchanging 3D printer platform using the design documented at:  
     https://github.com/htsrjdrouse/toolchanger_js_model  
     Interactive 3D viewer: http://htsresources.com:8080/  
+    <img src="/toolchanger_3d_partviewer.png" alt="3D Object Viewer" width="100%"/>
+
   - Implemented a Klipper-based operating system for tool loading/unloading, including microfluidics for precise liquid dispensing:  
     https://github.com/htsrjdrouse/rister-toolchanger/tree/4dispenser  
     This includes an integrated user interface for designing and controlling key fabrication parameters.  
   - Developed a fabrication design and reporting tool (Printer Designer) with modules for bed layout, tip/dispenser management, G-code building, and Shape Designer for line patterning:  
     Live instance: http://htsresources.com:3100/  
+    <br>
+    <br>
+    Project Manager
+    <img src="/printer-designer-project-viewer.png" alt="Project Manager" width="100%"/>
+    <br>
+    <br>
+    Object Viewer
+    <img src="/printer-designer-object-viewer.png" alt="3D Object Viewer" width="100%"/>
+    <br>
+    <br>
+    Dispenser Manager
+    <img src="/printer-designer-tip-manager.png" alt="Dispener Manager" width="100%"/>
+    <br>
+    <br>
+    G-code Builder
+    <img src="/printer-designer-gcode-builder.png" alt="G-code Builder" width="100%"/>
+    <br>
+    <br>
+    Line Designer
+    <img src="/printer-designer-shape-designer.png" alt="Line Designer" width="100%"/>
+
+
   - Created a camera inspection system using a Raspberry Pi 5 and Arducam focusing camera for real-time imaging and quality control:  
     https://github.com/htsrjdrouse/rister-toolchanger/tree/4dispenser/camera-pi  
 
