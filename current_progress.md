@@ -30,7 +30,6 @@
 - Precision of line placement across different dispensing tools, gauges, and ink viscosities has not yet been quantitatively assessed (planned for upcoming characterization runs).  
 
 ## Next Steps
-- Fabricate and integrate the **UV curing tool** (likely LED array or focused UV source mounted on the toolchanger).  
 - Perform detailed **precision assessment** of line placement and width consistency across multiple dispenser swaps and mimic ink types (using camera inspection + image analysis scripts).  
 - Conduct extended mimic ink runs to optimize multi-layer stacking and drying/curing behavior.  
 - Seek partnership with a local laboratory for safe handling and testing of real (biohazardous) perovskite inks, enabling measurement of:  

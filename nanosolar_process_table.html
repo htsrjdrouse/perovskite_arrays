@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanosolar Process Steps</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        .specs {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .spec-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .spec-label {
+            font-weight: bold;
+            color: #34495e;
+        }
+        .spec-value {
+            color: #16a085;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 10px;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+        }
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        .step-header {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .battery-step {
+            background-color: #fff9e6;
+        }
+        .solar-step {
+            background-color: #ffe6f0;
+        }
+        .encap-step {
+            background-color: #e6f3ff;
+        }
+        .substrate-step {
+            background-color: #f0f0f0;
+        }
+        .step-number {
+            font-weight: bold;
+            color: #2c3e50;
+            background: #ecf0f1;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 30px;
+            text-align: center;
+        }
+        .material {
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+        .parameter {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        .tool {
+            color: #9b59b6;
+            font-weight: 600;
+        }
+        .check {
+            color: #27ae60;
+            font-style: italic;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .note-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 8px;
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔆 Transparent Self-Charging Nanosolar Tile</h1>
+        <div class="subtitle">Complete Manufacturing Process Steps (Configuration 2: Optimized Balance)</div>
+        
+        <div class="specs">
+            <div class="spec-item">
+                <span class="spec-label">Target AVT:</span>
+                <span class="spec-value">58-62%</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Capacity:</span>
+                <span class="spec-value">0.28 mAh/cm²</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Solar PCE:</span>
+                <span class="spec-value">11%</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Total Thickness:</span>
+                <span class="spec-value">~145 µm</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Process Time:</span>
+                <span class="spec-value">~85 min/m²</span>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #f0f0f0;"></div>
+                <span>Substrate Prep</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #fff9e6;"></div>
+                <span>Battery Layers</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #ffe6f0;"></div>
+                <span>Solar Cell Layers</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background-color: #e6f3ff;"></div>
+                <span>Encapsulation</span>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 8%;">Step</th>
+                    <th style="width: 15%;">Layer/Function</th>
+                    <th style="width: 22%;">Material & Formulation</th>
+                    <th style="width: 18%;">Print Parameters</th>
+                    <th style="width: 18%;">Processing Conditions</th>
+                    <th style="width: 19%;">Quality Check</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Substrate -->
+                <tr class="substrate-step">
+                    <td><span class="step-number">1</span></td>
+                    <td><strong>Substrate Preparation</strong></td>
+                    <td><span class="material">ITO-PET film (125 µm)</span><br>Sheet resistance: 15-20 Ω/sq</td>
+                    <td>Manual loading<br>Align fiducials</td>
+                    <td>UV-ozone clean: 15 min<br>O₂ plasma optional (30 s)</td>
+                    <td class="check">✓ Visual inspection for particles<br>✓ Rs measurement via 4-point probe</td>
+                </tr>
+
+                <!-- Battery Anode -->
+                <tr class="battery-step">
+                    <td><span class="step-number">2</span></td>
+                    <td><strong>Battery Anode</strong><br>(LTO)</td>
+                    <td><span class="material">Nano-Li₄Ti₅O₁₂</span> (20 wt%)<br>+ 1 wt% Al₂O₃ nanoparticles<br>+ Triton X-100 (0.2 wt%)<br>Solvent: Water:Glycerol (7:3)</td>
+                    <td><span class="parameter">Nozzle:</span> 25-gauge (0.01" / 254 µm)<br><span class="parameter">Line width:</span> 150 µm<br><span class="parameter">Pitch:</span> 850 µm<br><span class="parameter">Speed:</span> 100 mm/s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 90°C<br><span class="parameter">Drying:</span> 5 min on bed<br><span class="parameter">Final thickness:</span> 4 µm<br>Coverage: 15% (line array)</td>
+                    <td class="check">✓ White-light microscopy<br>✓ Line width measurement<br>✓ Uniformity check (±10%)</td>
+                </tr>
+
+                <!-- Solid Electrolyte -->
+                <tr class="battery-step">
+                    <td><span class="step-number">3</span></td>
+                    <td><strong>Solid Electrolyte</strong><br>(LLZO-PEO)</td>
+                    <td><span class="material">Nano-LLZO</span> (15 wt%, <100 nm)<br>+ PEO (10 wt%, Mw 600k)<br>+ LiTFSI (10 wt%)<br>+ Irgacure 2959 (1 wt%)<br>+ 4CP (0.5 wt%)<br>Solvent: ACN:DMF (3:1)</td>
+                    <td><span class="parameter">Nozzle:</span> 20-gauge (0.02" / 508 µm)<br><span class="parameter">Registers to:</span> LTO lines<br><span class="parameter">Speed:</span> 80 mm/s<br><span class="tool">Tool:</span> Dispenser 1 → UV 2</td>
+                    <td><span class="parameter">Bed temp:</span> 80°C, 3 min dry<br><span class="parameter">UV cure:</span> 365 nm, 20 s @ 50 mW/cm²<br><span class="parameter">Final thickness:</span> 8 µm<br>Crosslinks PEO matrix</td>
+                    <td class="check">✓ White-light photo<br>✓ Registration check (±25 µm)<br>✓ No pinholes/cracks</td>
+                </tr>
+
+                <!-- Battery Cathode -->
+                <tr class="battery-step">
+                    <td><span class="step-number">4</span></td>
+                    <td><strong>Battery Cathode</strong><br>(LFP)</td>
+                    <td><span class="material">Nano-LiFePO₄</span> (18 wt%, <100 nm)<br>+ PVDF binder (3 wt%)<br>+ Al₂O₃ (1 wt%)<br>Solvent: DMF:DMSO (4:1)</td>
+                    <td><span class="parameter">Nozzle:</span> 27-gauge (0.007" / 178 µm)<br><span class="parameter">Registers to:</span> LLZO lines<br><span class="parameter">Speed:</span> 90 mm/s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 90°C<br><span class="parameter">Drying:</span> 6 min<br><span class="parameter">Final thickness:</span> 5 µm<br>Slow evaporation for density</td>
+                    <td class="check">✓ White-light uniformity<br>✓ Thickness via profilometry<br>✓ No delamination</td>
+                </tr>
+
+                <!-- Battery Collector -->
+                <tr class="battery-step">
+                    <td><span class="step-number">5</span></td>
+                    <td><strong>Battery Current Collector</strong><br>(AgNW Grid)</td>
+                    <td><span class="material">Silver nanowires</span> (0.5 wt%)<br>+ PEDOT:PSS (1 wt%)<br>Solvent: IPA:Ethanol (1:1)<br>NW diameter: 30-50 nm, L: 10-20 µm</td>
+                    <td><span class="parameter">Nozzle:</span> 33-34 gauge (0.0025" / 63.5 µm)<br><span class="parameter">Grid pattern:</span> 150 µm lines<br><span class="parameter">Speed:</span> 120 mm/s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 100°C<br><span class="parameter">Drying:</span> 3 min<br><span class="parameter">Final thickness:</span> 300 nm<br>Target Rs: <50 Ω/sq</td>
+                    <td class="check">✓ White-light + microscopy<br>✓ Rs via pogo pins (4-point)<br>✓ Continuity test</td>
+                </tr>
+
+                <!-- Solar HTL -->
+                <tr class="solar-step">
+                    <td><span class="step-number">6</span></td>
+                    <td><strong>Hole Transport Layer</strong><br>(NiOₓ)</td>
+                    <td><span class="material">NiOₓ nanoparticles</span> (15 wt%, <20 nm)<br>+ 4CP additive (1 wt%)<br>Solvent: Ethanol:H₂O (9:1)</td>
+                    <td><span class="parameter">Nozzle:</span> 30-gauge (0.005" / 127 µm)<br><span class="parameter">Line width:</span> 700 µm<br><span class="parameter">Fills gaps</span> between battery<br><span class="parameter">Speed:</span> 100 mm/s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 100°C<br><span class="parameter">Drying:</span> 2 min<br><span class="parameter">Final thickness:</span> 40 nm<br>Work function: ~5.0 eV</td>
+                    <td class="check">✓ Pinhole inspection (white light)<br>✓ Coverage >98%<br>✓ No overlap with battery grid</td>
+                </tr>
+
+                <!-- Perovskite -->
+                <tr class="solar-step">
+                    <td><span class="step-number">7</span></td>
+                    <td><strong>Perovskite Absorber</strong><br>(CsFA Mixed Halide)</td>
+                    <td><span class="material">Cs₀.₁₅FA₀.₈₅Pb(I₀.₈₅Br₀.₁₅)₃</span><br>+ Al₂O₃ (2 wt%)<br>+ Fluorinated C60 (1 wt%)<br>+ 4CP (2 wt%)<br>Solvent: DMF:DMSO (4:1)<br>Concentration: 1.4 M</td>
+                    <td><span class="parameter">Nozzle:</span> 32-gauge (0.004" / 102 µm)<br><span class="parameter">Registers to:</span> NiOₓ lines<br><span class="parameter">Speed:</span> 80 mm/s<br><span class="parameter">Antisolvent:</span> CB drip via 20-ga at 10 s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 80°C during print<br>→ Ramp to 100°C, hold 4 min<br><span class="parameter">Final thickness:</span> 320 nm (REDUCED)<br>Bandgap: 1.65 eV</td>
+                    <td class="check">✓ 455 nm PL mapping (CRITICAL)<br>✓ Lifetime >100 ns (good quality)<br>✓ Uniform crystal grain</td>
+                </tr>
+
+                <!-- Solar ETL -->
+                <tr class="solar-step">
+                    <td><span class="step-number">8</span></td>
+                    <td><strong>Electron Transport Layer</strong><br>(PCBM)</td>
+                    <td><span class="material">PC₆₁BM</span> (20 mg/mL)<br>+ BCP (0.5 wt%)<br>Solvent: Chlorobenzene</td>
+                    <td><span class="parameter">Nozzle:</span> 33-34 gauge (0.0025" / 63.5 µm)<br><span class="parameter">Registers to:</span> Perovskite<br><span class="parameter">Speed:</span> 100 mm/s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 90°C<br><span class="parameter">Drying:</span> 2 min<br><span class="parameter">Final thickness:</span> 30 nm<br>Rapid evaporation (CB)</td>
+                    <td class="check">✓ White-light photo<br>✓ Smooth coating (no residue)<br>✓ No perovskite damage</td>
+                </tr>
+
+                <!-- Top Electrode -->
+                <tr class="solar-step">
+                    <td><span class="step-number">9</span></td>
+                    <td><strong>Top Transparent Electrode</strong><br>(AgNW Grid)</td>
+                    <td><span class="material">Silver nanowires</span> (0.5 wt%)<br>Solvent: IPA:Ethanol (1:1)<br>Same formulation as Step 5</td>
+                    <td><span class="parameter">Nozzle:</span> 33-34 gauge (0.0025" / 63.5 µm)<br><span class="parameter">Grid pattern:</span> 700 µm lines<br><span class="parameter">Speed:</span> 120 mm/s<br><span class="tool">Tool:</span> Dispenser 1</td>
+                    <td><span class="parameter">Bed temp:</span> 100°C<br><span class="parameter">Drying:</span> 3 min<br><span class="parameter">Final thickness:</span> 80 nm<br>Target Rs: <30 Ω/sq</td>
+                    <td class="check">✓ White-light + microscopy<br>✓ Rs via pogo pins<br>✓ Grid continuity test</td>
+                </tr>
+
+                <!-- Encapsulation -->
+                <tr class="encap-step">
+                    <td><span class="step-number">10</span></td>
+                    <td><strong>Encapsulation</strong><br>(Sol-gel + UV Resin)</td>
+                    <td><span class="material">Dequasol sol-gel</span> (first layer)<br>+ UV-curable epoxy resin<br>+ Photoinitiator (2 wt%)<br>O₂/H₂O barrier</td>
+                    <td><span class="parameter">Nozzle:</span> 20-gauge (0.02") + 0.508 mm blade<br><span class="parameter">Full area</span> coating<br><span class="parameter">Speed:</span> 60 mm/s<br><span class="tool">Tool:</span> Dispenser 1 → UV 2</td>
+                    <td><span class="parameter">Initial:</span> 25°C<br>→ Ramp to 80°C, 5 min<br><span class="parameter">UV cure:</span> 395 nm, 12 s @ 100 mW/cm²<br><span class="parameter">Final thickness:</span> 5 µm</td>
+                    <td class="check">✓ Final visual inspection<br>✓ No bubbles/defects<br>✓ Edge seal integrity</td>
+                </tr>
+
+                <!-- Final Testing -->
+                <tr class="step-header">
+                    <td colspan="6" style="text-align: center; font-size: 14px;">
+                        <strong>FINAL DEVICE CHARACTERIZATION</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="step-number">11</span></td>
+                    <td><strong>Performance Testing</strong></td>
+                    <td colspan="2">
+                        <strong>Solar Cell:</strong><br>
+                        • J-V sweep under AM1.5G (100 mW/cm²)<br>
+                        • EQE measurement (300-900 nm)<br>
+                        • MPP tracking (5 min)
+                    </td>
+                    <td colspan="2">
+                        <strong>Battery:</strong><br>
+                        • Charge-discharge cycling (0.1C rate)<br>
+                        • Capacity measurement<br>
+                        • Integrated self-charging test (1-sun → 2 h)
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="step-number">12</span></td>
+                    <td><strong>Optical Testing</strong></td>
+                    <td colspan="4">
+                        • UV-Vis spectrophotometry (380-780 nm)<br>
+                        • Calculate photopic AVT per ASTM E308<br>
+                        • Target: <strong>58-62% AVT @ 550 nm</strong><br>
+                        • Color rendering index (CRI) measurement
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note">
+            <div class="note-title">⚠️ Critical Process Notes:</div>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+                <li><strong>Registration accuracy:</strong> ±25 µm tolerance between battery and solar lines to prevent shorts</li>
+                <li><strong>Environmental control:</strong> All printing in N₂ glovebox (O₂ < 10 ppm, H₂O < 1 ppm) for Steps 5-9</li>
+                <li><strong>Antisolvent timing:</strong> CB drip in Step 6 must occur exactly 10 s after line start for uniform crystal growth</li>
+                <li><strong>Perovskite quality gate:</strong> PL lifetime <100 ns → reject device (indicates defects)</li>
+                <li><strong>Line spacing verification:</strong> Check 150 µm battery / 850 µm pitch optically before Step 5</li>
+            </ul>
+        </div>
+
+        <div class="note" style="background: #d1ecf1; border-left-color: #0c5460; margin-top: 15px;">
+            <div class="note-title" style="color: #0c5460;">📊 Expected Performance Metrics:</div>
+            <ul style="margin: 8px 0; padding-left: 20px;">
+                <li><strong>Solar Voc:</strong> 1.08 V (single cell) → 16.2 V (15 cells in series)</li>
+                <li><strong>Solar Jsc:</strong> 18-20 mA/cm² (effective area basis)</li>
+                <li><strong>Fill Factor:</strong> 70-75%</li>
+                <li><strong>Battery Voltage Window:</strong> 1.5-2.5 V (LTO/LFP)</li>
+                <li><strong>Self-charging time:</strong> <30 min (1-sun) for full capacity</li>
+                <li><strong>Cycle life:</strong> >800 cycles @ 80% capacity retention</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 1500 1130" width="1500" height="1130" xmlns="http://www.w3.org/2000/svg"
+         font-family="'IBM Plex Mono','IBM Plex Sans',Arial,sans-serif">
+      <defs>
+        <pattern id="itoP" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+          <rect width="10" height="10" fill="#b0bec5"/>
+          <line x1="0" y1="0" x2="10" y2="10" stroke="#90a4ae" stroke-width="0.6"/>
+        </pattern>
+        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#8b949e"/>
+        </marker>
+      </defs>
+
+      <!-- Page background -->
+      <rect width="1500" height="1130" fill="#f0f4f8"/>
+
+      <!-- Title bar -->
+      <rect width="1500" height="68" fill="#1a237e"/>
+      <text x="750" y="28" font-size="22" font-weight="700" text-anchor="middle" fill="white"
+            font-family="'IBM Plex Sans',Arial,sans-serif">
+        Perovskite Solar Cell Fabrication — Top-Down Process Flow
+      </text>
+      <text x="750" y="52" font-size="14" text-anchor="middle" fill="#90caf9"
+            font-family="'IBM Plex Sans',Arial,sans-serif">
+        Line Array Pattern After Each Process Step | FASnI₃ on ITO-PET | Rister Toolchanger
+      </text>
+
+      <!-- ─────────────────── STEP PANELS  ───────────────────
+           Grid: 4 cols × 2 rows
+           Panel w=345  h=256
+           Col x: 18, 381, 744, 1107
+           Row y: 80, 356
+           ────────────────────────────────────────────────── -->
+
+      <!-- ── STEP 1 ── col1 row1 -->
+      <g transform="translate(18,80)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#e91e63" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#fce4ec"/>
+        <rect y="30" width="345" height="6" fill="#fce4ec"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#c2185b"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 1 — UV-Ozone Clean</text>
+        <rect x="82" y="46" width="180" height="116" fill="url(#itoP)" stroke="#546e7a" stroke-width="2.5" rx="3"/>
+        <text x="172" y="110" font-size="16" font-weight="700" text-anchor="middle" fill="#37474f"
+              font-family="'IBM Plex Sans',Arial,sans-serif">ITO-PET</text>
+        <text x="172" y="130" font-size="13" text-anchor="middle" fill="#546e7a"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Clean substrate</text>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#555"
+              font-family="'IBM Plex Sans',Arial,sans-serif">No pattern — uniform surface</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Surface activation via UV photons</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 15 min exposure</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Increases wettability for PEDOT:PSS</text>
+      </g>
+
+      <!-- ── STEP 2 ── col2 row1 -->
+      <g transform="translate(381,80)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#1976d2" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#e3f2fd"/>
+        <rect y="30" width="345" height="6" fill="#e3f2fd"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#1565c0"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 2 — PEDOT:PSS HTL</text>
+        <rect x="82" y="46" width="180" height="116" fill="#eceff1" stroke="#1976d2" stroke-width="2" rx="3"/>
+        <rect x="86" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="104" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="122" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="140" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="158" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="176" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="194" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="212" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <rect x="230" y="50" width="10" height="108" fill="#64b5f6" stroke="#1565c0" stroke-width="0.8"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#1565c0"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Parallel PEDOT:PSS lines (HTL)</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 25–30 G | 3–6 cP | Bed 80 °C</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Dry: 2–3 min @ 80 °C</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Hole transport layer ~100 nm</text>
+      </g>
+
+      <!-- ── STEP 3 ── col3 row1 -->
+      <g transform="translate(744,80)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#f57c00" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#fff3e0"/>
+        <rect y="30" width="345" height="6" fill="#fff3e0"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#e65100"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 3 — FASnI₃ Absorber</text>
+        <rect x="82" y="46" width="180" height="116" fill="#eceff1" stroke="#f57c00" stroke-width="2" rx="3"/>
+        <!-- ghost PEDOT -->
+        <rect x="86" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="104" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="122" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="140" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="158" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="176" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="194" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="212" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <rect x="230" y="50" width="10" height="108" fill="#bbdefb" opacity="0.45"/>
+        <!-- perovskite -->
+        <rect x="86" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="104" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="122" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="140" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="158" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="176" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="194" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="212" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <rect x="230" y="50" width="10" height="108" fill="#ffb74d" stroke="#e65100" stroke-width="0.8"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#e65100"
+              font-family="'IBM Plex Sans',Arial,sans-serif">FASnI₃ on PEDOT lines</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 20–25 G | 15–20 cP | Bed 80 °C</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Anneal: 100 °C, 5 min (N₂)</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Light-absorbing layer ~500 nm</text>
+      </g>
+
+      <!-- ── STEP 4 ── col4 row1 -->
+      <g transform="translate(1107,80)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#689f38" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#f1f8e9"/>
+        <rect y="30" width="345" height="6" fill="#f1f8e9"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#558b2f"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 4 — ICBA ETL</text>
+        <rect x="82" y="46" width="180" height="116" fill="#eceff1" stroke="#689f38" stroke-width="2" rx="3"/>
+        <!-- ghost perovskite -->
+        <rect x="86" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="104" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="122" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="140" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="158" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="176" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="194" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="212" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <rect x="230" y="50" width="10" height="108" fill="#ffe0b2" opacity="0.45"/>
+        <!-- ICBA -->
+        <rect x="86" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="104" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="122" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="140" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="158" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="176" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="194" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="212" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <rect x="230" y="50" width="10" height="108" fill="#aed581" stroke="#558b2f" stroke-width="0.8"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#558b2f"
+              font-family="'IBM Plex Sans',Arial,sans-serif">ICBA on FASnI₃ lines (ETL)</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 22–27 G | 12–18 cP | Bed 80 °C</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Dry: 1–2 min @ 80 °C</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Electron transport layer ~100 nm</text>
+      </g>
+
+      <!-- Row1 → Row2 elbow arrow -->
+      <polyline points="1280,336 1280,352 18,352 18,356"
+                fill="none" stroke="#8b949e" stroke-width="1.8" stroke-dasharray="6,3"
+                marker-end="url(#arr)"/>
+
+      <!-- ── STEP 5 ── col1 row2 -->
+      <g transform="translate(18,356)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#616161" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#f5f5f5"/>
+        <rect y="30" width="345" height="6" fill="#f5f5f5"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#424242"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 5 — Ag Busbar Electrode</text>
+        <rect x="82" y="46" width="180" height="116" fill="#eceff1" stroke="#616161" stroke-width="2" rx="3"/>
+        <!-- ghost ICBA lines -->
+        <rect x="86" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="104" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="122" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="140" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="158" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="176" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="194" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="212" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <rect x="230" y="64" width="10" height="94" fill="#c8e6c9" opacity="0.5"/>
+        <!-- busbar -->
+        <rect x="86" y="50" width="154" height="14" fill="#bdbdbd" stroke="#424242" stroke-width="1.5"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#424242"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Single Ag busbar across line tops</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 14–18 G | Ni-pen equiv. | Bed 80 °C</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Sinter: 120–150 °C, 10 min</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Single horizontal pass, contacts all lines</text>
+      </g>
+
+      <!-- ── STEP 6 ── col2 row2 -->
+      <g transform="translate(381,356)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#9c27b0" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#f3e5f5"/>
+        <rect y="30" width="345" height="6" fill="#f3e5f5"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#7b1fa2"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 6 — Sol-Gel Barrier</text>
+        <rect x="82" y="46" width="180" height="116" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="3"/>
+        <!-- ghost busbar -->
+        <rect x="86" y="50" width="154" height="14" fill="#ce93d8" opacity="0.3"/>
+        <!-- ghost lines -->
+        <rect x="86" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="104" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="122" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="140" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="158" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="176" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="194" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="212" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <rect x="230" y="70" width="10" height="88" fill="#e1bee7" opacity="0.35"/>
+        <!-- sol-gel -->
+        <rect x="86" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="104" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="122" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="140" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="158" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="176" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="194" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="212" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <rect x="230" y="50" width="10" height="108" fill="#ce93d8" stroke="#7b1fa2" stroke-width="0.8"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#7b1fa2"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Sol-gel barrier line array</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 23–28 G | 5–10 cP | RT 25 °C</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Gelation: 30 min RT | O₂/H₂O barrier</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Transparent ~1–2 µm</text>
+      </g>
+
+      <!-- ── STEP 7 ── col3 row2 -->
+      <g transform="translate(744,356)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#8e24aa" stroke-width="2"/>
+        <rect width="345" height="36" rx="7" fill="#fce4ec"/>
+        <rect y="30" width="345" height="6" fill="#fce4ec"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#ad1457"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Step 7 — UV Resin Encapsulation</text>
+        <rect x="82" y="46" width="180" height="116" fill="#fce4ec" stroke="#8e24aa" stroke-width="2" rx="3"/>
+        <!-- ghost -->
+        <rect x="86" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="104" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="122" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="140" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="158" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="176" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="194" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="212" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <rect x="230" y="50" width="10" height="108" fill="#f8bbd0" opacity="0.3"/>
+        <!-- UV resin -->
+        <rect x="86" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="104" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="122" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="140" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="158" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="176" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="194" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="212" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <rect x="230" y="50" width="10" height="108" fill="#f48fb1" stroke="#c2185b" stroke-width="0.8"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#c2185b"
+              font-family="'IBM Plex Sans',Arial,sans-serif">UV resin encapsulation lines</text>
+        <text x="14" y="200" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• 14–20 G | 90–150 cP | RT 25 °C</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• UV cure: 30–60 s @ 395 nm</text>
+        <text x="14" y="236" font-size="12" fill="#888" font-style="italic" font-family="'IBM Plex Sans',Arial,sans-serif">• Hermetic seal ~20–25 µm</text>
+      </g>
+
+      <!-- ── COMPLETE DEVICE ── col4 row2 -->
+      <g transform="translate(1107,356)">
+        <rect width="345" height="256" rx="7" fill="white" stroke="#2e7d32" stroke-width="3"/>
+        <rect width="345" height="36" rx="7" fill="#e8f5e9"/>
+        <rect y="30" width="345" height="6" fill="#e8f5e9"/>
+        <text x="172" y="23" font-size="15" font-weight="700" text-anchor="middle" fill="#1b5e20"
+              font-family="'IBM Plex Sans',Arial,sans-serif">&#x2713; Complete Device</text>
+        <rect x="82" y="46" width="180" height="116" fill="#e8f5e9" stroke="#4caf50" stroke-width="2.5" rx="3"/>
+        <rect x="86" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="104" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="122" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="140" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="158" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="176" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="194" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="212" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="230" y="54" width="10" height="100" fill="#81c784" stroke="#388e3c" stroke-width="0.8" opacity="0.55"/>
+        <rect x="86" y="50" width="154" height="8" fill="#66bb6a" opacity="0.5"/>
+        <text x="172" y="178" font-size="13" text-anchor="middle" fill="#2e7d32" font-weight="700"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Encapsulated Line Array Solar Cell</text>
+        <text x="172" y="196" font-size="12" text-anchor="middle" fill="#555"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Total thickness: ~127 µm</text>
+        <text x="14" y="218" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• Voc: 0.45–0.55 V | Jsc: 18–22 mA/cm²</text>
+        <text x="14" y="236" font-size="12" fill="#444" font-family="'IBM Plex Sans',Arial,sans-serif">• PCE: 6–9% | Flexible, lead-free</text>
+      </g>
+
+      <!-- Row arrows row1 -->
+      <line x1="365" y1="208" x2="379" y2="208" stroke="#8b949e" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="727" y1="208" x2="742" y2="208" stroke="#8b949e" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="1091" y1="208" x2="1105" y2="208" stroke="#8b949e" stroke-width="1.8" marker-end="url(#arr)"/>
+      <!-- Row arrows row2 -->
+      <line x1="365" y1="484" x2="379" y2="484" stroke="#8b949e" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="727" y1="484" x2="742" y2="484" stroke="#8b949e" stroke-width="1.8" marker-end="url(#arr)"/>
+      <line x1="1091" y1="484" x2="1105" y2="484" stroke="#8b949e" stroke-width="1.8" marker-end="url(#arr)"/>
+
+      <!-- ── BOTTOM LEGEND / REFERENCE ── -->
+      <g transform="translate(18,632)">
+        <rect width="1464" height="480" rx="7" fill="white" stroke="#dee2e6" stroke-width="1.5"/>
+
+        <!-- Layer stack -->
+        <text x="20" y="32" font-size="15" font-weight="700" fill="#1a237e"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Layer Stack</text>
+        <rect x="20" y="44" width="22" height="14" fill="url(#itoP)" stroke="#546e7a" stroke-width="1"/>
+        <text x="50" y="56" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">1. ITO-PET substrate (100 µm)</text>
+        <rect x="20" y="64" width="22" height="14" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+        <text x="50" y="76" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">2. PEDOT:PSS HTL (~100 nm)</text>
+        <rect x="20" y="84" width="22" height="14" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+        <text x="50" y="96" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">3. FASnI₃ absorber (~500 nm)</text>
+        <rect x="20" y="104" width="22" height="14" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+        <text x="50" y="116" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">4. ICBA ETL (~100 nm)</text>
+        <rect x="20" y="124" width="22" height="14" fill="#bdbdbd" stroke="#424242" stroke-width="1"/>
+        <text x="50" y="136" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">5. Ag busbar (~5–10 µm)</text>
+        <rect x="20" y="144" width="22" height="14" fill="#ce93d8" stroke="#7b1fa2" stroke-width="1"/>
+        <text x="50" y="156" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">6. Sol-gel barrier (~1–2 µm)</text>
+        <rect x="20" y="164" width="22" height="14" fill="#f48fb1" stroke="#c2185b" stroke-width="1"/>
+        <text x="50" y="176" font-size="13" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">7. UV resin (~20–25 µm)</text>
+
+        <!-- Cross-section -->
+        <text x="460" y="32" font-size="15" font-weight="700" fill="#1a237e"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Cross-Section (Side View)</text>
+        <rect x="410" y="220" width="300" height="22" fill="url(#itoP)" stroke="#546e7a" stroke-width="1.2"/>
+        <text x="718" y="232" font-size="11" fill="#546e7a" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  ITO-PET 100 µm</text>
+        <rect x="450" y="200" width="220" height="20" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+        <text x="718" y="210" font-size="11" fill="#1565c0" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  PEDOT:PSS ~100 nm</text>
+        <rect x="450" y="178" width="220" height="22" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+        <text x="718" y="189" font-size="11" fill="#e65100" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  FASnI₃ ~500 nm</text>
+        <rect x="450" y="160" width="220" height="18" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+        <text x="718" y="169" font-size="11" fill="#558b2f" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  ICBA ~100 nm</text>
+        <rect x="450" y="144" width="220" height="16" fill="#bdbdbd" stroke="#424242" stroke-width="1"/>
+        <text x="718" y="152" font-size="11" fill="#424242" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  Ag busbar ~5–10 µm</text>
+        <rect x="450" y="129" width="220" height="15" fill="#ce93d8" stroke="#7b1fa2" stroke-width="1"/>
+        <text x="718" y="136" font-size="11" fill="#7b1fa2" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  Sol-gel ~1–2 µm</text>
+        <rect x="450" y="107" width="220" height="22" fill="#f48fb1" stroke="#c2185b" stroke-width="1"/>
+        <text x="718" y="118" font-size="11" fill="#c2185b" font-family="'IBM Plex Mono',monospace" dominant-baseline="middle">  UV resin ~20–25 µm</text>
+        <text x="560" y="256" font-size="12" text-anchor="middle" fill="#888"
+              font-family="'IBM Plex Sans',Arial,sans-serif">← not to scale →</text>
+
+        <!-- Process notes col right -->
+        <text x="940" y="32" font-size="15" font-weight="700" fill="#1a237e"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Process Notes</text>
+
+        <rect x="930" y="44" width="514" height="130" rx="5" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5"/>
+        <text x="948" y="66" font-size="13" font-weight="700" fill="#f57f17"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Environment &amp; Registration</text>
+        <text x="948" y="84" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">• All steps 2–7 in N₂ glovebox (&lt;1 ppm O₂/H₂O)</text>
+        <text x="948" y="100" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">• Each layer registered via vision alignment</text>
+        <text x="948" y="116" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">• Line pitch ~850 µm | Line width ~150–700 µm</text>
+        <text x="948" y="132" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">• Rister toolchanger | BTT Octopus | EBB36 CAN</text>
+        <text x="948" y="148" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">• Total process time: 45–60 minutes</text>
+
+        <rect x="930" y="186" width="514" height="128" rx="5" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+        <text x="948" y="208" font-size="13" font-weight="700" fill="#0d47a1"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Ink Parameters</text>
+        <text x="948" y="226" font-size="12" fill="#333" font-family="'IBM Plex Mono',monospace">PEDOT:PSS  25–30 G  3–6 cP     80°C bed</text>
+        <text x="948" y="243" font-size="12" fill="#333" font-family="'IBM Plex Mono',monospace">FASnI₃     20–25 G  15–20 cP   80°C bed</text>
+        <text x="948" y="260" font-size="12" fill="#333" font-family="'IBM Plex Mono',monospace">ICBA       22–27 G  12–18 cP   80°C bed</text>
+        <text x="948" y="277" font-size="12" fill="#333" font-family="'IBM Plex Mono',monospace">Sol-gel    23–28 G  5–10 cP    RT</text>
+        <text x="948" y="294" font-size="12" fill="#333" font-family="'IBM Plex Mono',monospace">UV resin   14–20 G  90–150 cP  RT / 395nm</text>
+
+        <rect x="930" y="326" width="514" height="136" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+        <text x="948" y="348" font-size="13" font-weight="700" fill="#1b5e20"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Target Performance</text>
+        <text x="948" y="366" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">Voc: 0.45–0.55 V | Jsc: 18–22 mA/cm² | PCE: 6–9%</text>
+        <text x="948" y="383" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">Stack: ITO-PET / PEDOT:PSS / FASnI₃ / ICBA / Ag</text>
+        <text x="948" y="400" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">Active stack ~27 µm | Total ~127 µm</text>
+        <text x="948" y="418" font-size="12" fill="#333" font-family="'IBM Plex Sans',Arial,sans-serif">Flexible substrate | Tin-based | Lead-free | RoHS</text>
+        <text x="948" y="448" font-size="12" fill="#555" font-style="italic"
+              font-family="'IBM Plex Sans',Arial,sans-serif">Roll-to-roll compatible process pathway</text>
+      </g>
+    </svg>

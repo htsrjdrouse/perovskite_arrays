@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1500 1020" width="1500" height="1020"
+     xmlns="http://www.w3.org/2000/svg"
+     font-family="'IBM Plex Sans', Arial, Helvetica, sans-serif">
+
+  <!-- Background -->
+  <rect width="1500" height="1020" fill="#0d1117"/>
+
+  <!-- Title bar -->
+  <rect width="1500" height="72" fill="#1a237e"/>
+  <text x="750" y="28" font-size="22" font-weight="700" text-anchor="middle" fill="white">
+    Mimic Ink Recipes for PV Fabrication Testing
+  </text>
+  <text x="750" y="54" font-size="14" text-anchor="middle" fill="#90caf9">
+    Xanthan Gum-Based Formulations · 10 mL Batch Size · Viscosity-Matched to Real Solar Cell Inks
+  </text>
+
+  <!-- Purpose notice -->
+  <rect x="24" y="84" width="1452" height="38" rx="5" fill="#161b22" stroke="#388bfd" stroke-width="1.5"/>
+  <rect x="24" y="84" width="4" height="38" rx="2" fill="#388bfd"/>
+  <text x="42" y="98" font-size="13" font-weight="700" fill="#79c0ff">Purpose:</text>
+  <text x="114" y="98" font-size="13" fill="#c9d1d9">These mimic inks allow testing of dispensing parameters, line width, registration, and drying behavior</text>
+  <text x="42" y="114" font-size="13" fill="#c9d1d9">without using expensive or hazardous real materials. Viscosities are matched to actual solar cell inks.</text>
+
+  <!-- ── TABLE ── -->
+  <!-- Header row -->
+  <rect x="24" y="132" width="1452" height="38" rx="4" fill="#1c2128"/>
+  <!-- Col dividers in header -->
+  <text x="60"   y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">STEP</text>
+  <text x="120"  y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">PROCESS</text>
+  <text x="310"  y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">REAL INK / MATERIAL</text>
+  <text x="590"  y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">MIMIC RECIPE (10 mL)</text>
+  <text x="1000" y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">VISCOSITY</text>
+  <text x="1140" y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">NOZZLE</text>
+  <text x="1280" y="156" font-size="12" font-weight="700" fill="#8b949e" font-family="'IBM Plex Mono',monospace">NOTES / DRY TIME</text>
+
+  <!-- ── ROW 1: Step 1 – UV-Ozone ── -->
+  <rect x="24" y="170" width="1452" height="56" fill="#161b22"/>
+  <rect x="24" y="170" width="4" height="56" fill="#8b949e"/>
+  <!-- step badge -->
+  <circle cx="72" cy="198" r="16" fill="#1c2128" stroke="#30363d" stroke-width="1.5"/>
+  <text x="72" y="203" font-size="14" font-weight="700" text-anchor="middle" fill="#e6edf3" font-family="'IBM Plex Mono',monospace">1</text>
+  <!-- process -->
+  <text x="120" y="192" font-size="14" font-weight="700" fill="#e6edf3">UV-Ozone Clean</text>
+  <text x="120" y="210" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">ITO-PET substrate</text>
+  <!-- real ink -->
+  <rect x="310" y="182" width="160" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="390" y="196" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">— surface treatment</text>
+  <text x="310" y="218" font-size="12" fill="#8b949e">No ink required</text>
+  <!-- mimic -->
+  <rect x="590" y="182" width="80" height="20" rx="4" fill="#1a0e05" stroke="#d1810a" stroke-width="1"/>
+  <text x="630" y="196" font-size="12" text-anchor="middle" fill="#ffa657" font-family="'IBM Plex Mono',monospace">— no ink</text>
+  <!-- visc / gauge / notes -->
+  <text x="1000" y="198" font-size="14" fill="#8b949e">—</text>
+  <text x="1140" y="198" font-size="14" fill="#8b949e">—</text>
+  <text x="1280" y="194" font-size="12" fill="#8b949e" font-style="italic">No ink needed</text>
+  <text x="1280" y="210" font-size="12" fill="#8b949e" font-style="italic">for this step</text>
+  <!-- separator -->
+  <line x1="24" y1="226" x2="1476" y2="226" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── ROW 2: Step 2 – PEDOT:PSS ── -->
+  <rect x="24" y="226" width="1452" height="80" fill="#0d1117"/>
+  <rect x="24" y="226" width="4" height="80" fill="#64b5f6"/>
+  <circle cx="72" cy="266" r="16" fill="#051826" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="72" y="271" font-size="14" font-weight="700" text-anchor="middle" fill="#64b5f6" font-family="'IBM Plex Mono',monospace">2</text>
+  <text x="120" y="250" font-size="14" font-weight="700" fill="#e6edf3">PEDOT:PSS HTL</text>
+  <text x="120" y="268" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Bed: 80 °C</text>
+  <text x="120" y="286" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">HTL ~100 nm</text>
+  <!-- real -->
+  <rect x="310" y="234" width="160" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="390" y="248" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">Clevios P VP AI 4083</text>
+  <text x="310" y="264" font-size="12" fill="#8b949e">Aqueous dispersion</text>
+  <!-- mimic -->
+  <text x="590" y="244" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 9.7 mL deionized water</text>
+  <text x="590" y="260" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 3–4 drops blue food coloring</text>
+  <text x="590" y="276" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.002–0.003 g xanthan gum + 1 drop dish soap + 0.3 mL glycerin</text>
+  <!-- visc -->
+  <rect x="990" y="254" width="100" height="22" rx="11" fill="#051826" stroke="#388bfd" stroke-width="1"/>
+  <text x="1040" y="269" font-size="13" font-weight="700" text-anchor="middle" fill="#79c0ff" font-family="'IBM Plex Mono',monospace">3–6 cP</text>
+  <!-- gauge -->
+  <rect x="1130" y="254" width="88" height="22" rx="11" fill="#130d1f" stroke="#8957e5" stroke-width="1"/>
+  <text x="1174" y="269" font-size="13" font-weight="700" text-anchor="middle" fill="#d2a8ff" font-family="'IBM Plex Mono',monospace">25–30 G</text>
+  <!-- notes -->
+  <text x="1280" y="252" font-size="12" fill="#8b949e" font-style="italic">Deep blue wet →</text>
+  <text x="1280" y="268" font-size="12" fill="#8b949e" font-style="italic">pale/invisible dry.</text>
+  <text x="1280" y="284" font-size="12" fill="#8b949e" font-style="italic">Dry: 2–3 min @ 80 °C</text>
+  <line x1="24" y1="306" x2="1476" y2="306" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── ROW 3: Step 3 – FASnI₃ ── -->
+  <rect x="24" y="306" width="1452" height="80" fill="#161b22"/>
+  <rect x="24" y="306" width="4" height="80" fill="#ffb74d"/>
+  <circle cx="72" cy="346" r="16" fill="#1a0e05" stroke="#d1810a" stroke-width="1.5"/>
+  <text x="72" y="351" font-size="14" font-weight="700" text-anchor="middle" fill="#ffb74d" font-family="'IBM Plex Mono',monospace">3</text>
+  <text x="120" y="330" font-size="14" font-weight="700" fill="#e6edf3">FASnI₃ Absorber</text>
+  <text x="120" y="348" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Bed: 80 °C</text>
+  <text x="120" y="366" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Absorber ~500 nm</text>
+  <!-- real -->
+  <rect x="310" y="314" width="130" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="375" y="328" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">0.8 M FASnI₃</text>
+  <text x="310" y="344" font-size="12" fill="#8b949e">DMF:DMSO:GBL (6:3:1)</text>
+  <text x="310" y="360" font-size="12" fill="#8b949e">+ SnF₂ + EDAI₂</text>
+  <!-- mimic -->
+  <text x="590" y="324" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 9 mL deionized water + 1–2 drops yellow + 1 drop red food coloring</text>
+  <text x="590" y="340" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.004–0.005 g xanthan gum</text>
+  <text x="590" y="356" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 1 mL glycerin</text>
+  <!-- visc -->
+  <rect x="990" y="334" width="110" height="22" rx="11" fill="#051826" stroke="#388bfd" stroke-width="1"/>
+  <text x="1045" y="349" font-size="13" font-weight="700" text-anchor="middle" fill="#79c0ff" font-family="'IBM Plex Mono',monospace">15–20 cP</text>
+  <!-- gauge -->
+  <rect x="1130" y="334" width="88" height="22" rx="11" fill="#130d1f" stroke="#8957e5" stroke-width="1"/>
+  <text x="1174" y="349" font-size="13" font-weight="700" text-anchor="middle" fill="#d2a8ff" font-family="'IBM Plex Mono',monospace">20–25 G</text>
+  <!-- notes -->
+  <text x="1280" y="332" font-size="12" fill="#8b949e" font-style="italic">Orange-red wet →</text>
+  <text x="1280" y="348" font-size="12" fill="#8b949e" font-style="italic">amber semi-trans dry.</text>
+  <text x="1280" y="364" font-size="12" fill="#8b949e" font-style="italic">Anneal: 100 °C, 5 min</text>
+  <line x1="24" y1="386" x2="1476" y2="386" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── ROW 4: Step 4 – ICBA ── -->
+  <rect x="24" y="386" width="1452" height="80" fill="#0d1117"/>
+  <rect x="24" y="386" width="4" height="80" fill="#aed581"/>
+  <circle cx="72" cy="426" r="16" fill="#0a1205" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="72" y="431" font-size="14" font-weight="700" text-anchor="middle" fill="#aed581" font-family="'IBM Plex Mono',monospace">4</text>
+  <text x="120" y="410" font-size="14" font-weight="700" fill="#e6edf3">ICBA ETL</text>
+  <text x="120" y="428" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Bed: 80 °C</text>
+  <text x="120" y="446" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">ETL ~100 nm</text>
+  <!-- real -->
+  <rect x="310" y="394" width="120" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="370" y="408" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">ICBA 20 mg/mL</text>
+  <text x="310" y="424" font-size="12" fill="#8b949e">in chlorobenzene</text>
+  <!-- mimic -->
+  <text x="590" y="404" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 9.4 mL deionized water + 0.6 mL glycerin</text>
+  <text x="590" y="420" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.2 mL clear hand sanitizer gel + 1 drop dish soap</text>
+  <text x="590" y="436" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.003–0.004 g xanthan gum</text>
+  <!-- visc -->
+  <rect x="990" y="414" width="110" height="22" rx="11" fill="#051826" stroke="#388bfd" stroke-width="1"/>
+  <text x="1045" y="429" font-size="13" font-weight="700" text-anchor="middle" fill="#79c0ff" font-family="'IBM Plex Mono',monospace">12–18 cP</text>
+  <!-- gauge -->
+  <rect x="1130" y="414" width="88" height="22" rx="11" fill="#130d1f" stroke="#8957e5" stroke-width="1"/>
+  <text x="1174" y="429" font-size="13" font-weight="700" text-anchor="middle" fill="#d2a8ff" font-family="'IBM Plex Mono',monospace">22–27 G</text>
+  <!-- notes -->
+  <text x="1280" y="412" font-size="12" fill="#8b949e" font-style="italic">Clear glossy film.</text>
+  <text x="1280" y="428" font-size="12" fill="#8b949e" font-style="italic">Xanthan gives</text>
+  <text x="1280" y="444" font-size="12" fill="#8b949e" font-style="italic">perfect body.</text>
+  <line x1="24" y1="466" x2="1476" y2="466" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── ROW 5: Step 5 – Ag Busbar ── -->
+  <rect x="24" y="466" width="1452" height="80" fill="#161b22"/>
+  <rect x="24" y="466" width="4" height="80" fill="#bdbdbd"/>
+  <circle cx="72" cy="506" r="16" fill="#111" stroke="#616161" stroke-width="1.5"/>
+  <text x="72" y="511" font-size="14" font-weight="700" text-anchor="middle" fill="#bdbdbd" font-family="'IBM Plex Mono',monospace">5</text>
+  <text x="120" y="490" font-size="14" font-weight="700" fill="#e6edf3">Ag Busbar Electrode</text>
+  <text x="120" y="508" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Bed: 80 °C</text>
+  <text x="120" y="526" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Single horizontal pass</text>
+  <!-- real -->
+  <rect x="310" y="474" width="170" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="395" y="488" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">Ag nanoparticle paste</text>
+  <text x="310" y="504" font-size="12" fill="#8b949e">DuPont PE410 or equiv.</text>
+  <!-- mimic -->
+  <rect x="590" y="480" width="230" height="22" rx="4" fill="#1a0e05" stroke="#d1810a" stroke-width="1"/>
+  <text x="705" y="495" font-size="12" text-anchor="middle" fill="#ffa657" font-family="'IBM Plex Mono',monospace">Use conductive nickel pen</text>
+  <text x="590" y="516" font-size="12" fill="#8b949e">No water-based mimic needed — Ni pen matches rheology for prototype testing</text>
+  <!-- visc -->
+  <text x="1040" y="506" font-size="13" fill="#8b949e" text-anchor="middle">N/A</text>
+  <!-- gauge -->
+  <rect x="1130" y="493" width="110" height="22" rx="11" fill="#130d1f" stroke="#8957e5" stroke-width="1"/>
+  <text x="1185" y="508" font-size="12" font-weight="700" text-anchor="middle" fill="#d2a8ff" font-family="'IBM Plex Mono',monospace">Ni pen / 14–18 G</text>
+  <!-- notes -->
+  <text x="1280" y="492" font-size="12" fill="#8b949e" font-style="italic">Metallic silver dry.</text>
+  <text x="1280" y="508" font-size="12" fill="#8b949e" font-style="italic">Sinter 120–150 °C</text>
+  <text x="1280" y="524" font-size="12" fill="#8b949e" font-style="italic">10 min</text>
+  <line x1="24" y1="546" x2="1476" y2="546" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── ROW 6: Step 6 – Sol-Gel ── -->
+  <rect x="24" y="546" width="1452" height="80" fill="#0d1117"/>
+  <rect x="24" y="546" width="4" height="80" fill="#ce93d8"/>
+  <circle cx="72" cy="586" r="16" fill="#130d1f" stroke="#8957e5" stroke-width="1.5"/>
+  <text x="72" y="591" font-size="14" font-weight="700" text-anchor="middle" fill="#ce93d8" font-family="'IBM Plex Mono',monospace">6</text>
+  <text x="120" y="570" font-size="14" font-weight="700" fill="#e6edf3">Sol-Gel Barrier</text>
+  <text x="120" y="588" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">RT 25 °C</text>
+  <text x="120" y="606" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">O₂/H₂O barrier ~1–2 µm</text>
+  <!-- real -->
+  <rect x="310" y="554" width="130" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="375" y="568" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">Boehmite γ-AlOOH</text>
+  <text x="310" y="584" font-size="12" fill="#8b949e">Aqueous dispersion</text>
+  <!-- mimic -->
+  <text x="590" y="564" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 9.5 mL deionized water + 0.5 mL glycerin</text>
+  <text x="590" y="580" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 1 drop dish soap</text>
+  <text x="590" y="596" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.002–0.003 g xanthan gum</text>
+  <!-- visc -->
+  <rect x="990" y="574" width="110" height="22" rx="11" fill="#051826" stroke="#388bfd" stroke-width="1"/>
+  <text x="1045" y="589" font-size="13" font-weight="700" text-anchor="middle" fill="#79c0ff" font-family="'IBM Plex Mono',monospace">5–10 cP</text>
+  <!-- gauge -->
+  <rect x="1130" y="574" width="88" height="22" rx="11" fill="#130d1f" stroke="#8957e5" stroke-width="1"/>
+  <text x="1174" y="589" font-size="13" font-weight="700" text-anchor="middle" fill="#d2a8ff" font-family="'IBM Plex Mono',monospace">23–28 G</text>
+  <!-- notes -->
+  <text x="1280" y="572" font-size="12" fill="#8b949e" font-style="italic">Hard transparent film.</text>
+  <text x="1280" y="588" font-size="12" fill="#8b949e" font-style="italic">RT gelation ~30 min.</text>
+  <text x="1280" y="604" font-size="12" fill="#8b949e" font-style="italic">Registers to prev. layers</text>
+  <line x1="24" y1="626" x2="1476" y2="626" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ── ROW 7: Step 7 – UV Resin ── -->
+  <rect x="24" y="626" width="1452" height="80" fill="#161b22"/>
+  <rect x="24" y="626" width="4" height="80" fill="#f48fb1"/>
+  <circle cx="72" cy="666" r="16" fill="#1a0512" stroke="#c2185b" stroke-width="1.5"/>
+  <text x="72" y="671" font-size="14" font-weight="700" text-anchor="middle" fill="#f48fb1" font-family="'IBM Plex Mono',monospace">7</text>
+  <text x="120" y="650" font-size="14" font-weight="700" fill="#e6edf3">UV Resin Seal</text>
+  <text x="120" y="668" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">RT 25 °C</text>
+  <text x="120" y="686" font-size="12" fill="#8b949e" font-family="'IBM Plex Mono',monospace">Hermetic seal ~20–25 µm</text>
+  <!-- real -->
+  <rect x="310" y="634" width="150" height="20" rx="4" fill="#0d1a12" stroke="#3fb950" stroke-width="1"/>
+  <text x="385" y="648" font-size="12" text-anchor="middle" fill="#7ee787" font-family="'IBM Plex Mono',monospace">ELEGOO / NOA61</text>
+  <text x="310" y="664" font-size="12" fill="#8b949e">UV-curable acrylate</text>
+  <!-- mimic -->
+  <text x="590" y="644" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 7 mL PVA school glue + 3 mL deionized water</text>
+  <text x="590" y="660" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.5 mL glycerin</text>
+  <text x="590" y="676" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">› 0.01–0.015 g xanthan gum</text>
+  <!-- visc -->
+  <rect x="975" y="654" width="130" height="22" rx="11" fill="#051826" stroke="#388bfd" stroke-width="1"/>
+  <text x="1040" y="669" font-size="13" font-weight="700" text-anchor="middle" fill="#79c0ff" font-family="'IBM Plex Mono',monospace">90–150 cP</text>
+  <!-- gauge -->
+  <rect x="1130" y="654" width="88" height="22" rx="11" fill="#130d1f" stroke="#8957e5" stroke-width="1"/>
+  <text x="1174" y="669" font-size="13" font-weight="700" text-anchor="middle" fill="#d2a8ff" font-family="'IBM Plex Mono',monospace">14–20 G</text>
+  <!-- notes -->
+  <text x="1280" y="652" font-size="12" fill="#8b949e" font-style="italic">Clear glossy seal.</text>
+  <text x="1280" y="668" font-size="12" fill="#8b949e" font-style="italic">Air-dry 10–15 min</text>
+  <text x="1280" y="684" font-size="12" fill="#8b949e" font-style="italic">UV cure: 395 nm, 30–60 s</text>
+
+  <!-- ── BOTTOM NOTICES ── 3-col -->
+  <!-- Mixing instructions -->
+  <rect x="24"   y="722" width="468" height="268" rx="6" fill="#0d1117" stroke="#388bfd" stroke-width="1.5"/>
+  <rect x="24"   y="722" width="4"   height="268" rx="2" fill="#388bfd"/>
+  <text x="42" y="746" font-size="13" font-weight="700" fill="#79c0ff">📝 Mixing Instructions</text>
+  <text x="42" y="768" font-size="12" fill="#c9d1d9">› Add xanthan gum slowly while stirring vigorously</text>
+  <text x="42" y="786" font-size="12" fill="#8b949e">   to avoid clumping</text>
+  <text x="42" y="806" font-size="12" fill="#c9d1d9">› Rest 5–10 min after mixing to allow full hydration</text>
+  <text x="42" y="826" font-size="12" fill="#c9d1d9">› Stir again immediately before dispensing</text>
+  <text x="42" y="846" font-size="12" fill="#c9d1d9">› Store sealed, refrigerated — good for 1–2 weeks</text>
+  <text x="42" y="866" font-size="12" fill="#c9d1d9">› Bring to room temperature before use</text>
+  <text x="42" y="886" font-size="12" fill="#8b949e" font-style="italic">› Hand sanitizer gel (Step 4) helps achieve proper</text>
+  <text x="42" y="902" font-size="12" fill="#8b949e" font-style="italic">   viscosity and flow characteristics</text>
+
+  <!-- Testing only warning -->
+  <rect x="516"  y="722" width="468" height="268" rx="6" fill="#0d1117" stroke="#e3b341" stroke-width="1.5"/>
+  <rect x="516"  y="722" width="4"   height="268" rx="2" fill="#e3b341"/>
+  <text x="534" y="746" font-size="13" font-weight="700" fill="#d29922">⚠️ Testing Only</text>
+  <text x="534" y="768" font-size="12" fill="#c9d1d9">› Mimic inks do NOT function as solar cell materials</text>
+  <text x="534" y="788" font-size="12" fill="#c9d1d9">› Use to optimize: line width, registration accuracy,</text>
+  <text x="534" y="804" font-size="12" fill="#8b949e">   drying time, nozzle selection</text>
+  <text x="534" y="824" font-size="12" fill="#c9d1d9">› Switch to real materials in N₂ glovebox once</text>
+  <text x="534" y="840" font-size="12" fill="#8b949e">   parameters are confirmed</text>
+  <text x="534" y="860" font-size="12" fill="#c9d1d9">› Xanthan amounts are critical — start low,</text>
+  <text x="534" y="876" font-size="12" fill="#8b949e">   add more incrementally if needed</text>
+  <text x="534" y="896" font-size="12" fill="#c9d1d9">› All real-material steps in N₂ glovebox (&lt;1 ppm O₂)</text>
+
+  <!-- Cost savings -->
+  <rect x="1008" y="722" width="468" height="268" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="1008" y="722" width="4"   height="268" rx="2" fill="#3fb950"/>
+  <text x="1026" y="746" font-size="13" font-weight="700" fill="#7ee787">💡 Cost Comparison</text>
+  <text x="1026" y="768" font-size="12" fill="#c9d1d9">› Real ink per batch:  $50–200+</text>
+  <text x="1026" y="788" font-size="12" fill="#c9d1d9">› Mimic ink total:     &lt;$5</text>
+  <text x="1026" y="810" font-size="12" fill="#c9d1d9">› Suitable for unlimited nozzle calibration runs</text>
+  <text x="1026" y="830" font-size="12" fill="#c9d1d9">› Saves hundreds before committing real materials</text>
+  <text x="1026" y="858" font-size="13" font-weight="700" fill="#7ee787">Xanthan Gum Amounts (critical)</text>
+  <text x="1026" y="878" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">Step 2 (3–6 cP):     0.002–0.003 g</text>
+  <text x="1026" y="896" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">Step 3 (15–20 cP):   0.004–0.005 g</text>
+  <text x="1026" y="914" font-size="12" fill="#c9d1d9" font-family="'IBM Plex Mono',monospace">Step 7 (90–150 cP):  0.010–0.015 g</text>
+
+  <!-- Footer -->
+  <rect x="0" y="992" width="1500" height="28" fill="#1c2128"/>
+  <text x="24"   y="1010" font-size="11" fill="#8b949e" font-family="'IBM Plex Mono',monospace">HTS Resources LLC · rister-toolchanger</text>
+  <text x="750"  y="1010" font-size="11" fill="#8b949e" font-family="'IBM Plex Mono',monospace" text-anchor="middle">FASnI₃ PV Fabrication · Mimic Ink Reference</text>
+  <text x="1476" y="1010" font-size="11" fill="#8b949e" font-family="'IBM Plex Mono',monospace" text-anchor="end">Testing Only — Not Functional Solar Cell Materials</text>
+</svg>

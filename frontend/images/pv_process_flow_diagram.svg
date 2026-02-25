@@ -1,0 +1,295 @@
+<svg viewBox="0 0 1400 1050" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Pattern for ITO substrate -->
+    <pattern id="itoPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#b0bec5"/>
+      <line x1="0" y1="0" x2="10" y2="10" stroke="#90a4ae" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Title -->
+  <text x="700" y="35" font-size="28" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Perovskite Solar Cell Fabrication - Top-Down View
+  </text>
+  <text x="700" y="60" font-size="16" text-anchor="middle" fill="#666">
+    Line Array Pattern After Each Process Step
+  </text>
+  
+  <!-- Step 1: ITO-PET Substrate -->
+  <g transform="translate(50, 100)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#e91e63">Step 1: UV-Ozone Clean</text>
+    <text x="125" y="20" font-size="12" fill="#666">ITO-PET Substrate</text>
+    
+    <!-- Top-down view -->
+    <rect x="0" y="35" width="250" height="150" fill="url(#itoPattern)" stroke="#546e7a" stroke-width="3" rx="4"/>
+    <text x="125" y="115" font-size="14" font-weight="bold" text-anchor="middle" fill="#37474f">ITO-PET</text>
+    <text x="125" y="135" font-size="11" text-anchor="middle" fill="#546e7a">Clean substrate</text>
+    <text x="125" y="150" font-size="11" text-anchor="middle" fill="#546e7a">No pattern</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Surface activation</text>
+    <text x="270" y="100" font-size="11" fill="#333">• 15 min UV-ozone</text>
+    <text x="270" y="120" font-size="11" fill="#333">• Ready for coating</text>
+  </g>
+  
+  <!-- Step 2: PEDOT:PSS Lines -->
+  <g transform="translate(50, 340)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#1976d2">Step 2: PEDOT:PSS HTL</text>
+    <text x="125" y="20" font-size="12" fill="#666">25-30G | 80°C bed | 3-6 cP | Line coating</text>
+    
+    <!-- Top-down view with parallel lines -->
+    <rect x="0" y="35" width="250" height="150" fill="#eceff1" stroke="#1976d2" stroke-width="3" rx="4"/>
+    
+    <!-- PEDOT lines -->
+    <rect x="15" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="35" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="55" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="75" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="95" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="115" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="135" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="155" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="175" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="195" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    <rect x="215" y="45" width="12" height="130" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
+    
+    <text x="125" y="200" font-size="11" text-anchor="middle" fill="#1565c0" font-weight="bold">Parallel PEDOT lines</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Line array coating</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Hole transport layer</text>
+    <text x="270" y="120" font-size="11" fill="#333">• Dry: 2-3 min @ 80°C</text>
+  </g>
+  
+  <!-- Step 3: FASnI3 Perovskite Lines -->
+  <g transform="translate(50, 580)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#f57c00">Step 3: FASnI₃ Absorber</text>
+    <text x="125" y="20" font-size="12" fill="#666">20-25G | 80°C bed | 15-20 cP | Line coating</text>
+    
+    <!-- Top-down view with lines on lines -->
+    <rect x="0" y="35" width="250" height="150" fill="#eceff1" stroke="#f57c00" stroke-width="3" rx="4"/>
+    
+    <!-- Perovskite lines (same pattern, on top of PEDOT) -->
+    <rect x="15" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="35" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="55" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="75" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="95" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="115" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="135" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="155" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="175" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="195" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    <rect x="215" y="45" width="12" height="130" fill="#ffb74d" stroke="#e65100" stroke-width="1"/>
+    
+    <text x="125" y="200" font-size="11" text-anchor="middle" fill="#e65100" font-weight="bold">Perovskite on PEDOT lines</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Registers to PEDOT</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Absorber layer</text>
+    <text x="270" y="120" font-size="11" fill="#333">• Anneal: 100°C, 5 min</text>
+  </g>
+  
+  <!-- Step 4: ICBA ETL Lines -->
+  <g transform="translate(50, 820)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#689f38">Step 4: ICBA ETL</text>
+    <text x="125" y="20" font-size="12" fill="#666">22-27G | 80°C bed | 12-18 cP | Line coating</text>
+    
+    <!-- Top-down view -->
+    <rect x="0" y="35" width="250" height="150" fill="#eceff1" stroke="#689f38" stroke-width="3" rx="4"/>
+    
+    <!-- ICBA lines (subtle green tint on orange) -->
+    <rect x="15" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="35" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="55" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="75" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="95" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="115" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="135" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="155" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="175" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="195" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    <rect x="215" y="45" width="12" height="130" fill="#aed581" stroke="#558b2f" stroke-width="1"/>
+    
+    <text x="125" y="200" font-size="11" text-anchor="middle" fill="#558b2f" font-weight="bold">ICBA on perovskite lines</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Registers to FASnI₃</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Electron transport</text>
+    <text x="270" y="120" font-size="11" fill="#333">• Dry: 1-2 min @ 80°C</text>
+  </g>
+  
+  <!-- Step 5: Silver Electrode - SINGLE BUSBAR -->
+  <g transform="translate(490, 100)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#424242">Step 5: Ag Electrode</text>
+    <text x="125" y="20" font-size="12" fill="#666">14-18G | 80°C bed | Single busbar across lines</text>
+    
+    <!-- Top-down view with single busbar -->
+    <rect x="0" y="35" width="250" height="150" fill="#eceff1" stroke="#424242" stroke-width="3" rx="4"/>
+    
+    <!-- Show the line array underneath (faint) -->
+    <rect x="15" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="35" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="55" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="75" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="95" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="115" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="135" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="155" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="175" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="195" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    <rect x="215" y="55" width="12" height="110" fill="#c8e6c9" stroke="#558b2f" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Single horizontal busbar across top -->
+    <rect x="10" y="45" width="230" height="15" fill="#9e9e9e" stroke="#212121" stroke-width="2"/>
+    
+    <text x="125" y="200" font-size="11" text-anchor="middle" fill="#424242" font-weight="bold">Single busbar across line tops</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Horizontal busbar</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Contacts all lines</text>
+    <text x="270" y="120" font-size="11" fill="#333">• Sinter: 120-150°C</text>
+  </g>
+  
+  <!-- Step 6: Barrier Layer -->
+  <g transform="translate(490, 340)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#9c27b0">Step 6: Sol-Gel Barrier</text>
+    <text x="125" y="20" font-size="12" fill="#666">23-28G | 25°C RT | 5-10 cP | Line coating</text>
+    
+    <!-- Top-down view -->
+    <rect x="0" y="35" width="250" height="150" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3" rx="4"/>
+    
+    <!-- Show electrode and lines underneath as very faint pattern -->
+    <rect x="10" y="45" width="230" height="15" fill="#ce93d8" stroke="#7b1fa2" stroke-width="1" opacity="0.3"/>
+    <rect x="15" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="35" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="55" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="75" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="95" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="115" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="135" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="155" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="175" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="195" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    <rect x="215" y="70" width="12" height="105" fill="#e1bee7" stroke="#8e24aa" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Sol-gel barrier lines on top -->
+    <rect x="15" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="35" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="55" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="75" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="95" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="115" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="135" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="155" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="175" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="195" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    <rect x="215" y="45" width="12" height="130" fill="#ce93d8" stroke="#7b1fa2" stroke-width="2"/>
+    
+    <text x="125" y="200" font-size="11" text-anchor="middle" fill="#7b1fa2" font-weight="bold">Sol-gel barrier lines</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Line array coating</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Registers to prev. layers</text>
+    <text x="270" y="120" font-size="11" fill="#333">• O₂/H₂O barrier</text>
+    <text x="270" y="140" font-size="11" fill="#333">• Gelation: 30 min RT</text>
+  </g>
+  
+  <!-- Step 7: UV Seal -->
+  <g transform="translate(490, 580)">
+    <text x="125" y="0" font-size="16" font-weight="bold" fill="#8e24aa">Step 7: UV Resin Encapsulation</text>
+    <text x="125" y="20" font-size="12" fill="#666">14-20G | 25°C RT | 90-150 cP | Line coating</text>
+    
+    <!-- Top-down view -->
+    <rect x="0" y="35" width="250" height="150" fill="#fce4ec" stroke="#8e24aa" stroke-width="3" rx="4"/>
+    
+    <!-- Show all previous layers very faint -->
+    <rect x="10" y="45" width="230" height="15" fill="#f48fb1" stroke="#c2185b" stroke-width="1" opacity="0.3"/>
+    <rect x="15" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="35" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="55" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="75" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="95" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="115" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="135" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="155" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="175" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="195" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    <rect x="215" y="70" width="12" height="105" fill="#f8bbd0" stroke="#ad1457" stroke-width="1" opacity="0.3"/>
+    
+    <!-- UV resin lines on top -->
+    <rect x="15" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="35" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="55" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="75" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="95" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="115" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="135" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="155" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="175" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="195" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    <rect x="215" y="45" width="12" height="130" fill="#f48fb1" stroke="#c2185b" stroke-width="2"/>
+    
+    <text x="125" y="200" font-size="11" text-anchor="middle" fill="#c2185b" font-weight="bold">UV resin encapsulation lines</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Line array coating</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Registers to sol-gel</text>
+    <text x="270" y="120" font-size="11" fill="#333">• Hermetic seal</text>
+    <text x="270" y="140" font-size="11" fill="#333">• UV: 30-60 s @ 395 nm</text>
+  </g>
+  
+  <!-- Complete Device -->
+  <g transform="translate(490, 820)">
+    <text x="125" y="0" font-size="18" font-weight="bold" fill="#2e7d32">✓ Complete Device</text>
+    <text x="125" y="22" font-size="13" fill="#666">Total Thickness: ~127 µm</text>
+    
+    <!-- Top-down final view -->
+    <rect x="0" y="35" width="250" height="150" fill="#e8f5e9" stroke="#4caf50" stroke-width="4" rx="4"/>
+    
+    <!-- Show line pattern very faintly -->
+    <rect x="15" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="35" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="55" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="75" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="95" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="115" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="135" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="155" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="175" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="195" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="215" y="55" width="12" height="120" fill="#81c784" stroke="#388e3c" stroke-width="1" opacity="0.4"/>
+    <rect x="10" y="45" width="230" height="15" fill="#66bb6a" stroke="#2e7d32" stroke-width="1" opacity="0.4"/>
+    
+    <text x="125" y="200" font-size="12" text-anchor="middle" fill="#2e7d32" font-weight="bold">Encapsulated Line Array Solar Cell</text>
+    
+    <text x="270" y="80" font-size="11" fill="#333">• Voc: 0.45-0.55 V</text>
+    <text x="270" y="100" font-size="11" fill="#333">• Jsc: 18-22 mA/cm²</text>
+    <text x="270" y="120" font-size="11" fill="#333">• PCE: 6-9%</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(950, 100)">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#1a1a1a">Coating Pattern:</text>
+    <text x="0" y="25" font-size="12" fill="#666">Top-down view showing</text>
+    <text x="0" y="45" font-size="12" fill="#666">parallel line arrays</text>
+    
+    <rect x="0" y="70" width="350" height="200" fill="#fff9c4" stroke="#fbc02d" stroke-width="2" rx="6"/>
+    <text x="15" y="95" font-size="13" font-weight="bold" fill="#f57f17">Process Notes:</text>
+    <text x="25" y="118" font-size="11" fill="#333">• Steps 2-4: Parallel line coating</text>
+    <text x="25" y="138" font-size="11" fill="#333">• Each layer registers to previous</text>
+    <text x="25" y="158" font-size="11" fill="#333">• Step 5: Single busbar across tops</text>
+    <text x="25" y="178" font-size="11" fill="#333">• Steps 6-7: Full area protection</text>
+    <text x="25" y="198" font-size="11" fill="#333">• All steps 2-7 in N₂ glovebox</text>
+    <text x="25" y="218" font-size="11" fill="#333">• Total process: ~45-60 minutes</text>
+    <text x="25" y="238" font-size="11" fill="#333">• Line width: ~150-700 µm</text>
+    <text x="25" y="258" font-size="11" fill="#333">• Line spacing: ~850 µm pitch</text>
+    
+    <rect x="0" y="270" width="350" height="120" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="6"/>
+    <text x="15" y="295" font-size="13" font-weight="bold" fill="#0d47a1">Line Array Layers:</text>
+    <text x="25" y="318" font-size="11" fill="#333">1. ITO-PET (substrate) - no pattern</text>
+    <text x="25" y="338" font-size="11" fill="#333">2. PEDOT:PSS lines (HTL) - blue</text>
+    <text x="25" y="358" font-size="11" fill="#333">3. FASnI₃ lines (absorber) - orange</text>
+    <text x="25" y="378" font-size="11" fill="#333">4. ICBA lines (ETL) - light green</text>
+    
+    <rect x="0" y="410" width="350" height="120" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="6"/>
+    <text x="15" y="435" font-size="13" font-weight="bold" fill="#2e7d32">5-7. Contact &amp; Protection:</text>
+    <text x="25" y="458" font-size="11" fill="#333">5. Ag busbar - single bar across tops</text>
+    <text x="25" y="478" font-size="11" fill="#333">6. Sol-gel barrier lines (transparent)</text>
+    <text x="25" y="498" font-size="11" fill="#333">7. UV resin seal lines (transparent)</text>
+    <text x="25" y="518" font-size="11" fill="#333">→ All layers register to line array</text>
+  </g>
+</svg>
