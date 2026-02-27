@@ -23,9 +23,6 @@ const Layout: React.FC = () => {
             <Link to="/project-overview" style={{ color: '#00d4ff', textDecoration: 'none' }}>📊 Project Overview</Link>
           </li>
           <li style={{ marginBottom: '10px' }}>
-            <Link to="/fabrication-workflow" style={{ color: '#00d4ff', textDecoration: 'none' }}>⚗️ Fabrication Workflow</Link>
-          </li>
-          <li style={{ marginBottom: '10px' }}>
             <Link to="/current-progress" style={{ color: '#00d4ff', textDecoration: 'none' }}>✅ Current Progress</Link>
           </li>
         </ul>

@@ -8,10 +8,7 @@ Documentation hub for the open-source toolchanger 3D printer project developing 
   Opportunity, solution specs, key performance numbers, market focus, traction & roadmap
 
 - **[Project Overview](./project_overview.md)**  
-  Objectives, BIPV application, advantages, future extensions, mimic ink validation context
-
-- **[Fabrication Workflow](./fabrication_workflow.md)**  
-  7-step layer-by-layer process with mimic recipes, viscosities, recommended dispenser gauges
+  Objectives, BIPV application, advantages, future extensions, 7-step layer-by-layer process with mimic recipes, viscosities, recommended dispenser gauges, mimic ink validation context
 
 - **[Current Progress & Next Steps](./current_progress.md)**  
   What has been demonstrated so far, hardware/software status, lab collaboration path

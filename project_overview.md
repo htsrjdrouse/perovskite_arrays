@@ -16,4 +16,17 @@ The arrays harvest daylight to produce electricity, enable on-site energy storag
   - Projected manufacturing cost: < $15/m² at volume scale (based on material and process efficiencies; further reductions possible with optimization).
 - **Future Extension:** If photovoltaic performance is validated, the system can be extended to print integrated energy storage (e.g., perovskite-based or hybrid batteries) for self-contained, on-site power solutions.
 
-This work starts with safe mimic inks to validate hardware, dispensing, curing, and inspection workflows. It is positioned for collaboration with a local laboratory to transition to real (biohazardous) perovskite inks and precursors.
+<img src="/pv_process_flow_diagram.svg" alt="PV Process Flow" width="100%"/>
+
+<br>
+
+This work starts with safe mimic inks to validate hardware, dispensing, curing, and inspection workflows. It is positioned for collaboration with a local laboratory to transition to real (biohazardous) perovskite inks and precursors. The mimic inks can be aspirated and dispensed using 34g dispensing needles at room temperature.
+
+<img src="/mimic_ink_recipes.svg" alt="Mimic Inks Recipes" width="100%"/>
+
+
+
+
+
+
+
