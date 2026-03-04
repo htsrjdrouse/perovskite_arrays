@@ -94,7 +94,7 @@
 
 - **Unique Feature: Pipette Loading/Unloading**  
   The liquid handling tool supports dynamic loading and unloading of interchangeable pipettes/dispensers. This enables flexible use of different orifice sizes (gauges) to control line volumes, widths, and flow characteristics — a key advantage for multi-layer nanosolar array fabrication with varying ink viscosities and materials.
-<br>
+
   <details>
   <summary>Video Demonstrations of Tool & Pipette Handling (click to expand)</summary>
 
@@ -117,7 +117,7 @@
 
   </details>
 
-<br>
+
 
 - **Camera-Based Precision & Inspection**  
    The Rister camera system (Raspberry Pi 5 + Arducam) supports two complementary approaches for achieving accurate tool positioning and quality verification during fabrication:
@@ -139,62 +139,16 @@
   - Web-based electronic notebook for project documentation and sample tracking.  
   - Full integration of Printer Designer for layout configuration, tip settings, G-code generation, and line shape design — replacing static macros with dynamic, visual control.
 
-- **Precision Assessment**  
-  Initial spatial precision was evaluated by printing a 3-drop array using a 25G pipette and visually verifying placement against a pen-marked reference grid on the substrate. Between each print, the system executed a full camera toolchange, a liquid handling tool reload, and a pipette loading sequence — representing the most demanding realistic inter-print workflow. Despite this multi-step process, all three drops landed consistently within the marked target zones, demonstrating repeatable sub-millimeter positional accuracy across complete tool exchange cycles.
-
-    <br>
-    <details>
-    <summary>Precision Assessment: 3-drop array with pen-marked reference (Click to expand)</summary>
-    <img src="/public/precision_assessment.png" alt="Precision Assessment: 3-drop array with pen-marked reference" width="50%"/>
-    </details>
- <br>
-
-This result validates the toolchanger's coordinate reproducibility under real operating conditions and provides a baseline for upcoming quantitative characterization using camera-based image analysis scripts.
-
 ## Current Status & Limitations
+- The UV curing tool has not yet been fabricated (this step is considered relatively straightforward and is prioritized next).  
 - Precision of line placement across different dispensing tools, gauges, and ink viscosities has not yet been quantitatively assessed (planned for upcoming characterization runs).  
 
 ## Next Steps
-
-- **Establish ITO-PET Substrate Hydrophilicity via UV-Ozone Treatment**  
-  Before PEDOT:PSS deposition can succeed, the ITO-PET surface must be activated to remove organic contaminants and increase hydrophilicity (target contact angle: from ~60° down to <10°). This is Step 1 of the fabrication process and is a prerequisite for all subsequent liquid deposition.
-
-  UV-ozone treatment uses two complementary wavelengths: 185 nm generates ozone from ambient oxygen, while 254 nm drives direct photolysis of surface organics. Both are required for effective cleaning.
-
-  **Lamp acquired:** 36W E26-base UVC bulb (185 nm + ozone-generating). An enclosure has been built: aluminum foil-lined cardboard box with a hinged door cutout for substrate loading, lamp suspended ~200 mm above the substrate surface.
-
-  - **Enclosure notes**: Aluminum foil lining provides good UV reflectivity for uniform exposure. Cardboard is functional but monitor for ozone-induced degradation over time (browning, off-gassing) — a wooden or plastic box would be more durable for long-term use. Ensure the door cutout seals reasonably well during operation to contain ozone.
-  - **Ozone exhaust required**: Ozone is hazardous — add active ventilation (small fan + tubing to an outdoor vent or activated carbon filter) or operate inside a fume hood before routine use.
-  - **Intensity at 200 mm**: Expected intensity is in the lower range (~5–10 mW/cm²) at this standoff distance, so use longer exposure times (12–15 minutes) rather than the minimum.
-  - **Exposure time**: Target 12–15 minutes at room temperature. Do not exceed 15 minutes — longer exposures risk PET film degradation.
-  - **Calibration — Contact Angle Test Protocol**:  
-    Verify surface activation on scrap ITO-PET before treating production substrates. Target contact angle: from ~60–80° (untreated) down to <10° (fully activated).
-
-    *Equipment*: Micropipettor set to 2 µL, DI water (or clean tap water as a proxy), flat level surface, Raspberry Pi camera positioned side-on to the substrate.
-
-    *Procedure*:
-    1. Place scrap ITO-PET flat and level on a stable surface.
-    2. Dispense a 2 µL droplet onto the surface.
-    3. Capture a side-profile image immediately — within 10 seconds of dispensing, before the drop spreads or evaporates.
-    4. In the image, identify where the droplet base meets the substrate surface on both sides.
-    5. Draw tangent lines at each contact point; the angle between each tangent and the substrate surface is the contact angle. Average the left and right measurements.
-    6. Use ImageJ (free) with the contact angle plugin to semi-automate this measurement if available.
-
-    *Interpreting results*:
-    - **~60–80°**: Untreated or ineffectively treated — increase exposure time or check lamp operation.
-    - **20–40°**: Partial activation — extend treatment by 2–3 minutes and retest.
-    - **<10°**: Fully activated — proceed to PEDOT:PSS deposition.
-
-    *Important*: UV-ozone-treated ITO-PET reverts toward hydrophobic within hours of air exposure as organic contaminants re-adsorb. Always treat substrates and proceed to the next deposition step on the same day, ideally within 30–60 minutes.
-  - **Safety**: Never operate without the enclosure door closed. Do not look directly at the lamp. Allow 5–10 minutes post-treatment for ozone to dissipate before opening.
-
-- **Perform detailed precision assessment** of line placement and width consistency across multiple dispenser swaps and mimic ink types (using camera inspection + image analysis scripts).
-
-- **Conduct extended mimic ink runs** to optimize multi-layer stacking and drying/curing behavior.
-
-- **Seek partnership with a local laboratory** for safe handling and testing of real (biohazardous) perovskite inks, enabling measurement of:
-  - Photovoltaic performance (PCE under AM1.5G and indoor light)
-  - Transparency metrics (average visible transmittance – AVT, haze, color rendering)
-  - Long-term stability (damp-heat, light soaking)
+- Perform detailed **precision assessment** of line placement and width consistency across multiple dispenser swaps and mimic ink types (using camera inspection + image analysis scripts).  
+- Conduct extended mimic ink runs to optimize multi-layer stacking and drying/curing behavior.  
+- Seek partnership with a local laboratory for safe handling and testing of real (biohazardous) perovskite inks, enabling measurement of:  
+  - Photovoltaic performance (PCE under AM1.5G and indoor light)  
+  - Transparency metrics (average visible transmittance – AVT, haze, color rendering)  
+  - Long-term stability (damp-heat, light soaking)  
 
 This foundation enables scalable, low-cost fabrication of transparent nanosolar arrays and aligns closely with current BIPV research on line-array patterning for balancing efficiency, transparency, and manufacturability.

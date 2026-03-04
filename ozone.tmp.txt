@@ -1,0 +1,10 @@
+For Step 1: UV-Ozone Treatment of ITO-PET
+This step activates the substrate by removing organic contaminants and increasing hydrophilicity, which improves adhesion for subsequent layers like PEDOT:PSS. It requires a dual-wavelength UVC lamp (185 nm for ozone production from ambient oxygen, and 254 nm for direct photolysis). Avoid generic UV lamps; use a dedicated UV-Ozone cleaner to ensure uniform exposure over your array area (e.g., up to 12" x 12" for scalability). Key specs:
+
+Wavelength: 185 nm and 254 nm (dual-band essential).
+Intensity: 10-20 mW/cm² at the substrate surface (measured 5-10 cm away) for effective cleaning in 5-15 minutes without overheating flexible PET.
+Power/Configuration: 20-50 W total output, mercury-vapor or excimer lamp in an enclosed chamber with exhaust for ozone venting (safety critical, as ozone is hazardous).
+
+Exposure tip: Treat for 10-15 minutes at room temperature; longer risks PET degradation. Test on scrap ITO-PET first to verify contact angle reduction (from ~60° to <10° for optimal wetting).
+
+I got this lamp: Powerful 36W UV C Sanitizer Light，99.99% Sanitization Ozone UV C Lamp with 185nm Wavelength, 3-Level Timer, E26 Base for Home, Basement, Storehouse, Car (110V)
