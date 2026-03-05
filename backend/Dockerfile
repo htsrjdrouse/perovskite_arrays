@@ -2,14 +2,14 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY backend/package*.json ./
 RUN npm ci
 
-COPY . .
+COPY backend/ .
 RUN npm run build
 
 # Copy markdown files from project root
-COPY ../*.md /app/
+COPY *.md /app/
 
 # Create data directory
 RUN mkdir -p /app/data
