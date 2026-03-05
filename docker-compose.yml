@@ -19,6 +19,7 @@ services:
       - "3008:3002"
     environment:
       - PORT=3002
+      - NODE_ENV=production
     restart: unless-stopped
 
 networks:
