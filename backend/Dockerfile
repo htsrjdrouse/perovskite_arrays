@@ -8,6 +8,9 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
+# Copy markdown files from project root
+COPY ../*.md /app/
+
 # Create data directory
 RUN mkdir -p /app/data
 
