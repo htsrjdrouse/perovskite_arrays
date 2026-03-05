@@ -6,10 +6,11 @@ COPY backend/package*.json ./
 RUN npm ci
 
 COPY backend/ .
-RUN npm run build
 
-# Copy markdown files from project root
-COPY *.md /app/
+# Copy markdown files from project root BEFORE build
+COPY executive_summary.md project_overview.md fabrication_workflow.md current_progress.md NOTEBOOK.md ./
+
+RUN npm run build
 
 # Create data directory
 RUN mkdir -p /app/data
